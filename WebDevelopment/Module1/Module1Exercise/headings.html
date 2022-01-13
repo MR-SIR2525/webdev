@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Headings</title>
+</head>
+
+<style>
+  /*CSS button style class for first, alpha type button */
+  .alphaButton { 
+    color: #494949 !important;
+    /* text-transform: capitalize; */
+    text-decoration: none;
+    background: #dad8d8;
+    padding: 20px;
+    border: 3px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+  }
+  /*CSS subclass for alpha button - what happens when mouse hovers on button*/
+  .alphaButton:hover {
+    color: #ffffff !important;
+    background: #3b6df6;
+    border-color: #3b6df6 !important;
+    transition: all 0.4s ease 0s;
+  }
+
+  /*CSS button style class for second, bravo type button*/
+  .bravoButton { 
+    color: #494949 !important;
+    /* text-transform: capitalize; */
+    text-decoration: none;
+    background: #9b9a9a;
+    padding: 20px;
+    border: 3px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+  }
+  /* CSS subclass for bravo button - what happens when mouse hovers on button*/
+  .bravoButton:hover {
+    color: #ffffff !important;
+    background: #f63b3b;
+    border-color: #f63b3b !important;
+    transition: all 0.4s ease 0s;
+  }
+
+</style>
+
+<body>
+  <header>
+    <h1 style="background-color:rgb(0, 0, 0);text-align:center; color:rgb(255,255,255)">
+        This is the Title of My Header page</h1>
+  </header>
+
+  <nav>
+    <!-- Navigation section (comment demonstration) -->
+    <p style="color:darkslateblue; text-align:center ;"> 
+        HOME | NEWS | ABOUT </p>
+  </nav>
+
+  <article>
+    </header>
+    <h2>Headings in HTML (h2)</h2>
+    </header>
+
+    <section>
+      <header>
+        <h3>Section Heading 1</h3>
+      </header>
+      <p>words...</p>
+    </section>
+    <section>
+      <header>
+        <h3>Section Heading 2</h3>
+      </header>
+      <p>
+        Math....  5<sup>25</sup>  
+      </p>
+    </section>
+
+    <section>
+      <!--Client Side class...  learning buttons-->
+      <header>
+        <h3>Testing a button</h3>
+      </header>
+
+      <button style="background-color: rgb(151, 148, 148);" onclick="alert('You clicked the button')">
+        Click me 😃
+      </button>
+    
+      <!--Another button-->
+      <div class="button_cont" align="center"><a class="alphaButton" href="https://github.com/MR-SIR2525/webdev"
+        target="_blank" rel="nofollow noopener">
+        Go to Andrew's webdev repository</a>
+        <a class="bravoButton" href="https://thegravvytrain.github.io/webdev/"
+          target="_blank" rel="nofollow noopener">
+        Go to Grey's webpage</a>
+      </div>
+
+    
+    </section>
+
+    <section>
+      <header><h3>Current Day and Time</h3></header>
+      <script>
+        currentDateTime = new Date(); //variable - new date object
+        localTime = currentDateTime.toString(); //to strings for the date
+        GMT_time = currentDateTime.toGMTString();
+
+        //display/write time to the webpage
+        document.write("<p>Local time: " + localTime + "                  </p>");
+        document.write("<p>Universal time: " + GMT_time + "                  </p>");
+
+        hours = currentDateTime.getHours(); 
+        minutes = currentDateTime.getMinutes();
+        seconds = currentDateTime.getSeconds();
+        milliseconds = currentDateTime.getMilliseconds();
+
+        dayNum = currentDateTime.getDay(); //gets day as int value
+        day = "";
+
+        //converting int value to word
+        if (dayNum == 1)
+          day = "Monday";
+        else if (dayNum == 2)
+          day = "Tuesday";
+        else if (dayNum == 3)
+          day = "Wednesday";
+        else if (dayNum == 4)
+          day = "Thursday";
+        else if (dayNum == 5)
+          day = "Friday";
+        else if (dayNum == 6)
+          day = "Saturday";
+        else
+          day = "Sunday";
+        
+        //new, simple local time
+        document.write("<p>Local time: " + day + " " + hours + ":" + minutes + ":" + seconds + ":" + milliseconds + "   </p>");
+
+      </script>
+
+    </section>
+  </article>
+
+  <hr />
+  <footer>Copyright (not really) &copy; Andrew</footer>
+</body>
+
+</html>
+
+
+
+<!-- 
+  <h2>Welcome to web concepts and design</h2>
+          <p>Welcome. This will be a fun course.</p>
+        <h3>Heading 3</h3>
+          <p>This'll be a fun course</p>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <h7>Heading 7</h7>
+-->
