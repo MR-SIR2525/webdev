@@ -15,13 +15,58 @@
     <title>Andrew's Page - About Me</title>
 </head>
 
+<style>
+    /*CSS button style class for navigation buttons */
+    .navButton {
+        color: #494949 !important;
+        /* text-transform: capitalize; */
+        text-decoration: none;
+        background: #dad8d8;
+        padding: 10px;
+        border-radius: 5px;
+        /* Apparently this is how you do rounded borders? */
+        border: 1px solid #494949 !important;
+        display: inline-block;
+        transition: all 0.4s ease 0s;
+    }
+
+    /*CSS subclass for navigation button - what happens when mouse hovers on button*/
+    .navButton:hover {
+        color: #ffffff !important;
+        background: #585858;
+        border-color: #3b6df6 !important;
+        transition: all 0.4s ease 0s;
+    }
+</style>
+
 <body>
     <header>
-        <h1>SITE OR PAGE LOGO GOES HERE</h1>
+        <h1 aria-label="Page Title"
+            style="background-color:rgb(54, 54, 54);text-align:center; color:white; font-size: 25pt; padding-top:4px; padding-bottom:4px;">
+            Andrew's Web Development Page</h1>
+
+        <nav aria-label="Navigation Buttons">
+            <div class="button_cont" align="center" style="font-family: Arial, Helvetica, sans-serif;">
+                <!-- for links, target="_blank" makes browser open link in new tab -->
+                <a class="navButton" href="index.html" rel="nofollow noopener">
+                    Home</a>
+                <a class="navButton" href="page1.html" rel="nofollow noopener">
+                    Page 1</a>
+                <a class="navButton" href="headings.html" rel="nofollow noopener">
+                    Headings.html</a>
+                <a class="navButton" href="https://thegravvytrain.github.io/webdev/">
+                    Grey's Page</a>
+                <a class="navButton" href="secret.html" rel="nofollow noopener">
+                    Secret</a>
+                <a class="navButton" href="aboutMe.html" rel="nofollow noopener">
+                    About Me
+                </a>
+
+            </div>
+        </nav>
+        <hr />
     </header>
-    <nav>
-        SITE OR PAGE NAVIGATION GOES HERE.
-    </nav>
+
     <article>
         <header>
             <h2>Article Heading</h2>
