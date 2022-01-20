@@ -1,10 +1,12 @@
 /*CSS button style class for navigation buttons */
 .navButton {
     color: #494949 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
     /* text-transform: capitalize; */
     text-decoration: none;
     background: #dad8d8;
-    padding: 10px;
+    padding: 8px;
     border-radius: 5px;
     /* Apparently this is how you do rounded borders? */
     border: 1px solid #494949 !important;
