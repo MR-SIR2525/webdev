@@ -14,7 +14,11 @@
 
   <title>Andrew's Page - Home</title>
 
-  <link rel="stylesheet" href="navButton.css">
+  <link rel="stylesheet" href="Styles\navButton.css">
+  <link rel="stylesheet" href="Styles\buttonStyle.css">
+
+  <script src="Module1\Module1Exercise\getTime.js"></script>
+
   <style>
     h3 {
       font-size: medium;
@@ -28,23 +32,26 @@
       <h1 aria-label="Page Title"
         style="background-color:rgb(54, 54, 54);text-align:center; color:white; font-size: x-large;">
         Andrew's Web Development Page</h1>
-      <p style="color: rgb(138, 189, 255); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode;">
+      <!-- <p style="color: rgb(138, 189, 255); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode;">
         Dr. Preston, Module 1 Assignment = Home, Headings.html, and About Me
-      </p>
+      </p> -->
 
       <div class="button_cont" style="text-align: center;">
         <!-- for links, target="_blank" makes browser open link in new tab -->
-        <a class="navButton" href="index.html" rel="nofollow noopener">
+        <a class="navButton" href="https://mr-sir2525.github.io/webdev/" rel="nofollow noopener">
           Home</a>
-        <a class="navButton" href="wildWool.html" rel="nofollow noopener">
+        <a class="navButton" href="Module1\Module1Assignment\wildWool.html" rel="nofollow noopener">
           Wild Wool Exercise</a>
-        <a class="navButton" href="headings.html" rel="nofollow noopener">
+        <a class="navButton" href="Module2/Module2Exercise/index.html" rel="nofollow noopener">
+          Module 2 Exercise
+        </a>
+        <a class="navButton" href="Module1\Module1Assignment\headings.html" rel="nofollow noopener">
           Headings.html</a>
         <a class="navButton" href="https://thegravvytrain.github.io/webdev/">
           Grey's Page</a>
-        <a class="navButton" href="secret.html" rel="nofollow noopener">
+        <a class="navButton" href="Module1\Module1Assignment\secret.html" rel="nofollow noopener">
           Secret</a>
-        <a class="navButton" href="aboutMe.html" rel="nofollow noopener">
+        <a class="navButton" href="Module1\Module1Assignment\aboutMe.html" rel="nofollow noopener">
           About Me
         </a>
 
@@ -86,7 +93,7 @@
       Speed that I will play sometimes.
     </p>
     <footer style="font-size: smaller;">*footer is here*</footer>
-    
+
   </section>
 
   <!-- Requirement #3 satisfied here -->
@@ -126,12 +133,64 @@
 
   </article>
 
+  <section>
+    <hr>
+    <header>
+      <h2 style="text-align: center;">Date and Time</h2>
+    </header>
+    <p>
+      <button class="example_c" type="button" onclick="document.getElementById('timeHere').innerHTML = getTime()">
+        Display current time</button> <span id="timeHere"></span>
+    </p>
+
+    <script>
+      currentDateTime = new Date(); //variable - new date object
+      localTime = currentDateTime.toString(); //to strings for the date
+      GMT_time = currentDateTime.toGMTString();
+
+      //display/write time to the webpage
+      document.write("<p>Local time: " + localTime + "                  </p>");
+      document.write("<p>Universal time: " + GMT_time + "                  </p>");
+
+      hours = currentDateTime.getHours();
+      minutes = currentDateTime.getMinutes();
+      seconds = currentDateTime.getSeconds();
+      milliseconds = currentDateTime.getMilliseconds();
+
+      dayNum = currentDateTime.getDay(); //gets day as int value
+      day = "";
+
+      //converting int value to word
+      if (dayNum == 1)
+        day = "Monday";
+      else if (dayNum == 2)
+        day = "Tuesday";
+      else if (dayNum == 3)
+        day = "Wednesday";
+      else if (dayNum == 4)
+        day = "Thursday";
+      else if (dayNum == 5)
+        day = "Friday";
+      else if (dayNum == 6)
+        day = "Saturday";
+      else
+        day = "Sunday";
+
+      //new, simple local time
+      document.write("<p>Local time: " + day + " " + hours + ":" + minutes + ":" + seconds + ":" + milliseconds + "   </p>");
+
+    </script>
+
+
+  </section>
+
 
   <footer>
     <hr />
     <script>//JS thing for a last modified feature
       document.write("Last modified: " + document.lastModified);            
     </script>
+
 
   </footer>
 
