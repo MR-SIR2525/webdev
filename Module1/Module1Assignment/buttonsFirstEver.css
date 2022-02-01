@@ -1,0 +1,42 @@
+/* These are the first ever button styles I used (from this website below) */
+/* https://www.fabriziovanmarciano.com/button-styles/ */
+
+/*CSS button style class for first, alpha type button */
+.alphaButton {
+    color: #494949 !important;
+    /* text-transform: capitalize; */
+    text-decoration: none;
+    background: #dad8d8;
+    padding: 20px;
+    border: 3px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+  }
+
+  /*CSS subclass for alpha button - what happens when mouse hovers on button*/
+  .alphaButton:hover {
+    color: #ffffff !important;
+    background: #3b6df6;
+    border-color: #3b6df6 !important;
+    transition: all 0.4s ease 0s;
+  }
+
+  /*CSS button style class for second, bravo type button*/
+  .bravoButton {
+    color: #494949 !important;
+    /* text-transform: capitalize; */
+    text-decoration: none;
+    background: #dad8d8;
+    padding: 20px;
+    border: 3px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+  }
+
+  /* CSS subclass for bravo button - what happens when mouse hovers on button*/
+  .bravoButton:hover {
+    color: #ffffff !important;
+    background: #f63b3b;
+    border-color: #f63b3b !important;
+    transition: all 0.4s ease 0s;
+  }

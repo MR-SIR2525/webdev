@@ -1,0 +1,38 @@
+body {
+  background-color: cornsilk;
+}
+
+.sitetitle{
+    font-size: 40px;
+    background-color: #dc1414;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+/*navigation style*/
+.navbar {
+    overflow: hidden;    
+    position: fixed;
+    top: 80px;
+    width: 100%;
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: #dc1414;
+    text-align: center;
+    padding: 15px 18px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .navbar a:hover {
+    color: #ffffff;
+    background-color: #666666;
+  }
+  .container {
+    padding: 18px;
+    margin-top: 25px;
+    height: 2000px;
+  }

@@ -1,23 +1,32 @@
 /*CSS button style class for navigation buttons */
 .navButton {
-    color: #494949 !important;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:small;
-    /* text-transform: capitalize; */
-    text-decoration: none;
-    background: #dad8d8;
-    padding: 8px;
-    border-radius: 5px;
-    /* Apparently this is how you do rounded borders? */
-    border: 1px solid #494949 !important;
-    display: inline-block;
-    transition: all 0.4s ease 0s;
+    width: 100%;
+    background-color: #494949;
+    padding-top: 0px;
+    padding-bottom: 4px;
 }
+    .navButton nav {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .navButton a{
+        color: #494949 !important;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:medium;
+        /* text-transform: capitalize; */
+        text-decoration: none;
+        background: #dad8d8;
+        padding: 7px;
+        border-radius: 5px;
+        border: 2px solid #494949 !important;
+        display: inline-block;
+        transition: all 0.4s ease 0s;
+    }
 
-/*CSS subclass for navigation button - what happens when mouse hovers on button*/
-.navButton:hover {
-    color: #ffffff !important;
-    background: #585858;
-    border-color: #3b6df6 !important;
-    transition: all 0.4s ease 0s;
-}
+    .navButton a:hover {
+        color: #ffffff !important;
+        background: #646464;
+        border-color: #3b6df6 !important;
+        border-radius: 0px;
+        transition: all 0.4s ease 0s;
+    }

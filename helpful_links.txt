@@ -1,0 +1,25 @@
+https://www.fabriziovanmarciano.com/button-styles/
+
+images
+https://www.w3schools.com/html/html_images.asp
+
+CSS Tooltip
+https://www.w3schools.com/css/css_tooltip.asp#:~:text=Basic%20Tooltip&text=HTML%3A%20Use%20a%20container%20element,with%20class%3D%22tooltiptext%22%20.
+
+HTML styles - CSS
+https://www.w3schools.com/html/html_css.asp
+
+HTML CSS TUTORIAL FOR BEGINNERS - multiple pages
+https://youtu.be/iXSSHlOe47s
+
+display Date and Time button
+https://www.w3schools.com/js/tryit.asp?filename=tryjs_myfirst
+
+Explained: noopener, noreferrer, and nofollow
+https://pointjupiter.com/what-noopener-noreferrer-nofollow-explained/#:~:text=Enter%20rel%3D%22nofollow%22%20.,page%20you%20are%20linking%20to.
+
+Image to text generator
+https://www.prepostseo.com/image-to-text
+
+Python inside HTML?
+https://www.digi.com/resources/documentation/digidocs/90001537/references/r_python_inside_html.htm?TocPath=Categories%7CWeb%20Access%7C_____2#:~:text=It%20is%20possible%20to%20run,be%20executed%20at%20run%20time.

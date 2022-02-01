@@ -7,23 +7,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="randomQuote.js"></script>
   <link rel="stylesheet" href="navButton.css">
+
+  <script src="randomQuote.js"></script>
 
 </head>
 
 <body>
+  <nav>
+    <div class="button_cont" style="text-align: center;">
+      <!-- for links, target="_blank" makes browser open link in new tab -->
+      <a class="navButton" href="https://mr-sir2525.github.io/webdev/" rel="nofollow noopener">
+        Home</a>
+    </div>
+  </nav>
+
+
   <h1>Quotable Quotes</h1>
   <p>Following is a random quotable quote. To see a new quote
     just reload this page.</p>
 
-  <button onclick="getQuote()">Get quote</button>
-  <div id="quoteHere"></div>
+  <button class="example_c" type="button" onclick="document.innerHTML = getQuote()">
+    Get new quote</button> <span id="quoteHere"></span>
 
-  <script>
-    //- Using a function pointer:
-    document.getElementById("quoteButton2").onclick = getQuote();
-  </script>
 </body>
 
 </html>

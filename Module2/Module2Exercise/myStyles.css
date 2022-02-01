@@ -1,4 +1,61 @@
 /*Your style will go here*/
-body{
-    background-color: darkgray;
+body
+{
+    background-color: rgb(250, 250, 250);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p
+{
+    font-size: medium;
+    color: rgb(17, 17, 17);
+}
+h1
+{
+    color: rgb(168, 15, 46);
+    font-weight: 500;
+}
+h2
+{
+    background: lightgray;
+}
+.boldWord {
+    /* bold but not super bold */
+    font-weight: 600;
+}
+h3
+{
+    font-size: x-large;
+}
+
+.standOut {
+    
+    background-image: linear-gradient(to left, lightblue, lightgray);
+    color: black;
+
+}
+
+/* The following styles are for file "listing6_2.html */
+.rightAlign {
+    text-align: right;
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+.centerAlign {
+    text-align: center;
+}
+
+#table1Header {
+    text-transform: none;
+    font-weight: bold;
+    color: rgb(49, 49, 49);
+}
+
+.preStyle {
+    background-color: cornsilk;
+    width: 40%;
+    font-size: large;
+    border: 2px rgb(49, 49, 49);
 }

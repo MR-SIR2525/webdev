@@ -1,0 +1,110 @@
+/* This CSS file includes the default style for title, navbar, and general font across all pages.
+ * Last updated:  2/1/22 
+ */
+
+h3 {
+  font-size: large;
+}
+p {
+  font-size: large;
+}
+
+
+.sitetitle {
+    font-size: 25pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:#494949;
+    color:white;
+    text-align: center;
+    padding-top: 0px;
+
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* I currently use the file "/Styles/navButton.css" for my nav*/
+/*navigation style by Dr. Preston*/
+.navbar {
+    overflow: hidden;    
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: #dc143c;
+    text-align: center;
+    padding: 15px 18px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .navbar a:hover {
+    color: #ffffff;
+    background-color: #666666;
+  }
+  .container {
+    padding: 18px;
+    margin-top: 25px;
+    height: 2000px;
+  }
+
+/* 3 column format (suggested use in <article> )*/
+.columns3 {
+  column-count: 3;
+  column-gap: 21px;
+
+  }
+
+  .columns3 h1 {
+    text-align: center;
+    column-span: all;
+  }
+
+  .columns3 p {
+    margin-top: 0px;
+    margin-bottom: 12px;
+  }
+
+  .columns3 footer {
+    column-span: all;
+  }
+
+
+/* nav description text container class */
+/* https://www.w3schools.com/css/css_tooltip.asp#:~:text=Basic%20Tooltip&text=HTML%3A%20Use%20a%20container%20element,with%20class%3D%22tooltiptext%22%20. */
+.navInfo {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+}
+
+  /* Tooltip text */
+  .navInfo .navInfotext {
+    visibility: hidden;
+    width:fit-content;
+    background-color: rgba(48, 48, 48, 0.87);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+
+    /* fade in effect */
+    opacity: 0;
+    transition: opacity 0.40s;
+    
+    /* Positioning the tooltip text */
+    position: absolute;
+    z-index: 1;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .navInfo:hover .navInfotext {
+    transition-delay: 0.70s;
+    visibility: visible;
+    pointer-events: none; /* Enables click-through */
+    opacity: 1; /* Fade in effect */
+  }

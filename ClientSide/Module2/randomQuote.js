@@ -28,7 +28,7 @@ function getQuote()
     // Get a random index into the arrays
     i = Math.floor(Math.random() * quotes.length);
 
-    qt = document.getElementById("quoteHere")
+    qt = document.getElementById("quoteHere");
 
     // Write out the quote as HTML
     // document.write("<p style='background-color: #ffb6c1' >\"");

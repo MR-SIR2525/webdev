@@ -1,0 +1,41 @@
+/* Copied from defaultStyle.css on 2/1/22 (updated  2/1/22)  */
+/* nav description text container class */
+/* https://www.w3schools.com/css/css_tooltip.asp#:~:text=Basic%20Tooltip&text=HTML%3A%20Use%20a%20container%20element,with%20class%3D%22tooltiptext%22%20. */
+.navInfo {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+  }
+  
+    /* Tooltip text */
+    .navInfo .navInfotext {
+      visibility: hidden;
+      width:fit-content;
+      background-color: rgba(194, 194, 194, 0.932);
+      color: rgb(32, 32, 32);
+      border: 1px solid rgb(77, 77, 77);
+      border-top-right-radius: 6px;
+      border-top-left-radius: 13px;
+      border-bottom-right-radius: 12px;
+
+      text-align: center;
+      padding: 4px;
+      font-size: small;
+      font-family: sans-serif;
+  
+      /* fade in effect */
+      opacity: 0;
+      transition: opacity 0.40s;
+      
+      /* Positioning the tooltip text */
+      position: absolute;
+      z-index: 1;
+    }
+  
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .navInfo:hover .navInfotext {
+      transition-delay: 0.70s;
+      visibility: visible;
+      pointer-events: none; /* Enables click-through */
+      opacity: 1; /* Fade in effect */
+    }
