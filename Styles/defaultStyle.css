@@ -103,7 +103,7 @@ p {
 
   /* Show the tooltip text when you mouse over the tooltip container */
   .navInfo:hover .navInfotext {
-    transition-delay: 0.70s;
+    transition-delay: 0.60s;
     visibility: visible;
     pointer-events: none; /* Enables click-through */
     opacity: 1; /* Fade in effect */
