@@ -25,17 +25,23 @@
     .imagesize {
       width: 24%;
     }
+    table,  tr, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 3px;
+    }
   </style>
 
 </head>
 
 <body>
-  <div class="navButton" id="nav and title">
+  <div class="navButton" id="nav-and-title">
     <header>
       <h1 class="sitetitle">Andrew's Web Development Page</h1>
-      <p style="padding: 4px; font-family: Arial, Helvetica, sans-serif; color: rgb(106, 188, 255);">
-        Still need to do table for Module 2 Assignment
-      </p>
+
+      <!-- <p style="padding: 4px; font-family: Arial, Helvetica, sans-serif; color: rgb(106, 188, 255);">
+        Message or alert here
+      </p> -->
     </header>
     <nav>
       <a class="navInfo" href="https://mr-sir2525.github.io/webdev/" rel="nofollow noopener">Home
@@ -123,37 +129,69 @@
   <br>
   
   <article>
-  <section style="text-align:center;">
-    <div class="tooltip" style="display: inline;">
-      <img class="imagesize" src="/webdev/Images/Lexus-ISF-black.jpg" alt="Black Lexus ISF sedan side view">
-      <span class="tooltiptext">Lexus ISF. Imagine a rear-wheel drive Toyota Camry with a rumbly 5.0L V8 that produces 416 horsepower.</span>
-    </div>
-    <div class="tooltip" style="display: inline;">
-      <img class="imagesize" src="/webdev/Images/Lexus-ISF-black-front.jpg" alt="Black Lexus ISF sedan front view">
-      <span class="tooltiptext">Lexus ISF</span>
-    </div>
-    <div class="tooltip" style="display: inline;">
-      <img class="imagesize" src="/webdev/Images/2017-bentley-continental-supersport.jpg"
-        alt="2017 Bentley Continental Super Sport in dark charcoal grey">
-      <span class="tooltiptext">2017 Bentley Continental Super Sport. All-wheel drive, ultra luxury, powered by a 6.0L V12 engine. Surprisingly a good rally car.</span>
-    </div>
-    <div class="tooltip" style="display: inline;">
-      <img class="imagesize" src="/webdev/Images/Ferrari-458-Italia.jpg" alt="Ferrari 458 Italia in red">
-      <span class="tooltiptext" style="left:unset; right:4px; width: 35%;">Ferrari 458 Italia, one of the greatest super
-        cars ever made.</span>
-    </div>
-  </section>
+    <section style="text-align:center;">
+      <div class="tooltip" style="display: inline;">
+        <img class="imagesize" src="/webdev/Images/Lexus-ISF-black.jpg" alt="Black Lexus ISF sedan side view">
+        <span class="tooltiptext">Lexus ISF. Imagine a rear-wheel drive Toyota Camry with a rumbly 5.0L V8 that produces 416 horsepower.</span>
+      </div>
+      <div class="tooltip" style="display: inline;">
+        <img class="imagesize" src="/webdev/Images/Lexus-ISF-black-front.jpg" alt="Black Lexus ISF sedan front view">
+        <span class="tooltiptext">Lexus ISF</span>
+      </div>
+      <div class="tooltip" style="display: inline;">
+        <img class="imagesize" src="/webdev/Images/2017-bentley-continental-supersport.jpg"
+          alt="2017 Bentley Continental Super Sport in dark charcoal grey">
+        <span class="tooltiptext">2017 Bentley Continental Super Sport. All-wheel drive, ultra luxury, powered by a 6.0L V12 engine. Surprisingly a good rally car.</span>
+      </div>
+      <div class="tooltip" style="display: inline;">
+        <img class="imagesize" src="/webdev/Images/Ferrari-458-Italia.jpg" alt="Ferrari 458 Italia in red">
+        <span class="tooltiptext" style="left:unset; right:4px; width: 35%;">Ferrari 458 Italia, one of the greatest super
+          cars ever made.</span>
+      </div>
+    </section>
 
-  <section style="text-align: right; right: 3px;">
-    <p>
-      Here are images of the cars I covet the most. <br>
-      Hover over one to see what kind it is.
-    </p>
-  </section>
-  
-  
-  
-  
+    <div style="text-align: right; right: 3px;">
+      <p>
+        Here are images of the cars I covet the most. <br>
+        Hover over one to see what kind it is.
+      </p>
+    </div>
+    
+    <section id="car-spec-table">
+      <h3>Car Specs</h3>
+      <table>
+        <tr>
+          <th style="width: 200px;">Vehicle</th>
+          <th style="width: 90px;">Engine</th>
+          <th style="width: 30px;">hp</th>
+          <th style="width: 25px;">drive</th>
+        </tr>
+        <tr>
+          <td>2013 Lexus ISF</td>
+          <td>5.0L V8</td>
+          <td>420</td>
+          <td>RWD</td>
+        </tr>
+        <tr>
+          <td>2017 Bentley Continental GT</td>
+          <td>6.0L W12</td>
+          <td>500</td>
+          <td>AWD</td>
+        </tr>
+        <tr>
+          <td>2015 Ferrari 458 Italia</td>
+          <td>4.5L V8</td>
+          <td>570</td>
+          <td>RWD</td>
+        </tr>
+        <tr>
+          <td>2018 Lexus GSF</td>
+          <td>5.0L V8 (same engine from ISF)</td>
+          <td>467</td>
+          <td>RWD</td>
+        </tr>
+      </table>
+    </section>
   </article>
 
   <!-- ************************************ Date and time below **************************************** -->
