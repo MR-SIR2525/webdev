@@ -1,11 +1,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
-    <title>Event Handler Example</title>
+    <title>Multiplication Game</title>
+    <script src="multiplicationGame.js"></script>
 </head>
 
 <body>
@@ -15,8 +16,22 @@
             <a href="http://www.google.com" target="_blank" rel="nofollow noopener">
                 Go to Google.com</a>
         </button>
-
     </div>
+
+    <section>
+        <h3>Multiplication Game</h3>
+        <form id="game" name="game" action="">
+            <span id="showMessage"></span>
+            <span id="num1"></span> x <span id="num2"></span>
+        
+            <input id="guess" autofocus="autofocus" type="text">
+            <input id="submitAnswer" type="submit" onclick="checkAnswer()">
+        
+        <p id="response"></p>
+        
+        </form>
+
+    </section>
 </body>
 
 </html>
