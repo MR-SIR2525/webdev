@@ -3,80 +3,88 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Swapping Images</title>
 
-    <script src="swap.js"></script> 
-
-    <style>
+    <link rel="stylesheet" href="/webdev/Styles/defaultStyle.css">
+    <link rel="stylesheet" href="/webdev/Styles/navButton.css">
+    <style> 
         aside {
             float: right;
 
         }
     </style>
 
+<script src="swap.js"></script>
+
 
 </head>
 
 <body>
+    <div class="navButton" id="nav-and-title">
+        <header>
+            <h1 class="sitetitle">Andrew's Web Development Page</h1>
+
+            <!-- <p style="padding: 1px; font-family: Arial, Helvetica, sans-serif; color: rgb(106, 188, 255);">
+            Message or alert here
+          </p> -->
+        </header>
+        <nav>
+            <a class="navInfo" href="/webdev/index.html" rel="nofollow noopener">Website Home
+                <span class="navInfotext">Website home</span></a>
+            <a href="index.html">↩ Back to Module 2</a>
+        </nav>
+    </div>
+
     <header>
         <h1>Swap Images - Client Side Programming</h1>
     </header>
-    <nav>
-        <a class="navButton" href="https://mr-sir2525.github.io/webdev/" rel="nofollow noopener">
-            Home</a>
-    </nav>
     <article>
         <h3>This page shows how to swap images using JavaScript.</h3>
 
-        <img id="large_image" src="images/stoplight-asthetic.jpg" alt="A dark asthetic picture of a stop light showing red." 
+        <img id="large_image" src="images/stoplight-asthetic.jpg"
+            alt="A dark asthetic picture of a stop light showing red."
             style="border: ipx solid black; margin-right: 13px; width: 500px; height: 400px;">
         <aside>
             <p id="imgdesc" style='background-color: #ffb6c1'>
-                Here is a zoomed-in shot of a traffic light, currently displaying red.
-                A beer bottle appears to be in the background.
+                Here is a zoomed-in shot of a traffic light, currently displaying red, with a beer bottle in the
+                background.
             </p>
         </aside>
         <div>
             <!-- <a href="#" onclick="JavaScript:document.images[large_image]"></a> -->
             <!-- PAGE 499 -->
 
-            <img src="images/stoplight-asthetic.jpg" 
+            <img src="images/stoplight-asthetic.jpg"
                 style="width:80px; height: 57px; border: 1px solid black; margin-right: 3px;"
-                onclick="swapImage('images/stoplight-asthetic.jpg')" 
-                alt="Backside view of an Audi R8 super car.">
+                onclick="swapImage('images/stoplight-asthetic.jpg')" alt="Backside view of an Audi R8 super car.">
 
-            <img src="images/Audi-R8.jpg" 
-                style="width:80px; height: 57px; border: 1px solid black; margin-right: 3px;"
-                onclick="swapImage('images/Audi-R8.jpg')" 
-                alt="Backside view of an Audi R8 super car.">
-            
-            <img src="images/weird-face-thing.jpg" 
-                style="width:80px; height: 57px; border: 1px solid black; margin-right: 3px;"
-                onclick="swapImage('images/weird-face-thing.jpg')" 
-                alt="Backside view of an Audi R8 super car.">
-            
-            <img src="images/truck-in-desert.jpg" 
-                style="width:80px; height: 57px; border: 1px solid black; margin-right: 3px;"
-                onclick="swapImage('images/truck-in-desert.jpg')" 
-                alt="Backside view of an Audi R8 super car.">
-            
-            <img src="images/ground-view-of-plane.jpg" 
-                style="width:80px; height: 57px; border: 1px solid black; margin-right: 3px;"
-                onclick="swapImage('images/ground-view-of-plane.jpg')" 
-                alt="Backside view of an Audi R8 super car.">
-            
-            
+            <img src="images/Audi-R8.jpg" style="width:80px; height: 57px; border: 1px solid black; margin-right: 3px;"
+                onclick="swapImage('images/Audi-R8.jpg')" alt="Backside view of an Audi R8 super car.">
 
-            
+            <img src="images/weird-face-thing.jpg"
+                style="width:80px; height: 57px; border: 1px solid black; margin-right: 3px;"
+                onclick="swapImage('images/weird-face-thing.jpg')" alt="Backside view of an Audi R8 super car.">
+
+            <img src="images/truck-in-desert.jpg"
+                style="width:80px; height: 57px; border: 1px solid black; margin-right: 3px;"
+                onclick="swapImage('images/truck-in-desert.jpg')" alt="Backside view of an Audi R8 super car.">
+
+            <img src="images/ground-view-of-plane.jpg"
+                style="width:80px; height: 57px; border: 1px solid black; margin-right: 3px;"
+                onclick="swapImage('images/ground-view-of-plane.jpg')" alt="Backside view of an Audi R8 super car.">
+
+
+
+
 
 
 
         </div>
 
     </article>
-    <footer>
-        SITE OR PAGE FOOTER HERE
-    </footer>
+    <footer></footer>
 </body>
 
 </html>

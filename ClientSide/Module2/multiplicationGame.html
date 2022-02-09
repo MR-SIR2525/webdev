@@ -4,12 +4,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/webdev/Styles/navButton.css">
+    <link rel="stylesheet" href="/webdev/Styles/defaultStyle.css">
 
     <title>Multiplication Game</title>
     <script src="multiplicationGame.js"></script>
 </head>
 
 <body>
+    <div class="navButton" id="nav-and-title">
+        <header>
+            <h1 class="sitetitle">Andrew's Web Development Page</h1>
+
+            <!-- <p style="padding: 1px; font-family: Arial, Helvetica, sans-serif; color: rgb(106, 188, 255);">
+            Message or alert here
+          </p> -->
+        </header>
+        <nav>
+            <a class="navInfo" href="/webdev/index.html" rel="nofollow noopener">Website Home
+                <span class="navInfotext">Website home</span></a>
+            <a href="index.html">↩ Back to Module 2</a>
+        </nav>
+    </div>
     <h1>Event Handler Example</h1>
     <div>
         <button onclick="alert('Nice object')">
@@ -23,12 +39,12 @@
         <form id="game" name="game" action="">
             <span id="showMessage"></span>
             <span id="num1"></span> x <span id="num2"></span>
-        
+
             <input id="guess" autofocus="autofocus" type="text">
             <input id="submitAnswer" type="submit" onclick="checkAnswer()">
-        
-        <p id="response"></p>
-        
+
+            <p id="response"></p>
+
         </form>
 
     </section>
