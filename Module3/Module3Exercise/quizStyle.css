@@ -1,0 +1,64 @@
+html {
+    background-image: url('/webdev/Images/cloudbackground.jpg');
+    background-size: 100%; 
+    /* no point to center and define width to be 100% */
+    margin: 0%;
+    background-color: rgb(236, 236, 236);
+}
+
+body {
+    margin-top: 0px;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: rgb(64, 61, 216) none;   
+}
+
+a:link {
+    color: rgb(0, 81, 255);
+}
+a:visited {
+    color: rgb(122, 114, 245);
+    text-shadow: 4px;
+}
+a:hover {
+    color: rgb(5, 5, 87);
+}
+
+a:focus {
+    border: solid 2px rgb(46, 142, 167);
+}
+
+/* this is for the key page */
+.text1
+{
+    margin-bottom: 8px;
+}
+.code1
+{
+    margin-top: 8px;
+}
+
+.document-preview
+{
+    background-color: white;
+    left: 0%;
+    width: 96%;
+    height: 840px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.quiz-content 
+{
+    width: 70%;
+    padding: 0.5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: solid 1px grey;
+}
