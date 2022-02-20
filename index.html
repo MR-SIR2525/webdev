@@ -22,14 +22,37 @@
   <script src="/webdev/Module1/Module1Exercise/getTime.js"></script>
 
   <style>
-    .imagesize {
+    .imagesize 
+    {
       width: 24%;
     }
-    table,  tr, th, td {
+    .imagesize:hover, .imagesize:focus
+    {
+      border: solid rgb(24, 22, 22) 3px;
+      border-radius: 3px;
+    }
+    table, tr, th, td 
+    {
       border: 1px solid black;
       border-collapse: collapse;
       padding: 3px;
     }
+    #first-column-header /*removes margin of header so that it's flush with previous element*/
+    {
+      margin-top: 0px;
+    }
+    ul 
+    {
+      display: block;
+      list-style-type: disc;
+      margin-block-start: .5em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 40px;
+    }
+
+    
   </style>
 
 </head>
@@ -38,28 +61,23 @@
   <div class="navButton" id="nav-and-title">
     <header>
       <h1 class="sitetitle">Andrew's Web Development Page</h1>
-      <span style="padding-left: 8px; font-size: large; font-family: Arial, Helvetica, sans-serif; color: rgb(106, 188, 255);">
-        Visit HTML Module 3 for the quiz exercise</span> 
+
+      <span style="margin-left: 8px; font-size: large; font-family: Arial, Helvetica, sans-serif; color: rgb(106, 188, 255);">
+        Module 3 assignment in progress...</span> 
     </header>
     <nav>
-      <a class="navInfo" href="/webdev/index.html" rel="noopener">Home
-        <span class="navInfotext">Website home</span></a>
-      <a class="navInfo" href="/webdev/Module2/" rel="oopener">HTML Module 2
-        <span class="navInfotext">HTML Module 2 Assignment folder</span></a>
-      <a href="/webdev/Module3/index.html" title="Module 3 - quiz in here">HTML Module 3</a>
-      <a class="navInfo" href="/webdev/ClientSide/" rel="noopener">Client Side
-          <span class="navInfotext">Client Side things</span></a>
-      <a class="navInfo" href="/webdev/Module1/Module1Assignment/headings.html" rel="noopener">Headings.html
-        <span class="navInfotext">Practice of different headers and some info about Calculus</span></a>
-      <a class="navInfo" href="https://thegravvytrain.github.io/webdev/" rel="noopener">Grey's Page
-        <span class="navInfotext">Visit my buddy Grey's website</span></a>
-      <a class="navInfo" href="/webdev/Module1/Module1Assignment/secret.html" rel="noopener">Secret
-        <span class="navInfotext">the secret</span></a>
-      <a class="navInfo" href="/webdev/Module1/Module1Assignment/aboutMe.html" rel="noopener">About Me
-        <span class="navInfotext">the missile...</span></a>
-      <a class="navInfo" href="/webdev/Other/MultiplicationGame_outsourced/index.html" rel="noopener">Other Multiplication Game
-        <span class="navInfotext">outsourced game</span></a>
-    </nav>
+      <a href="/webdev/index.html" rel="noopener" title="Website Home">Home</a>
+      <a href="/webdev/Module2/index.html" rel="noopener" title="HTML Module 2">Module 2</a>
+      <a href="/webdev/Module3/index.html" rel="noopener" title="HTML Module 3">Module 3</a>
+      <a href="/webdev/ClientSide/index.html" rel="noopener" title="Client Side">Client Side</a>
+      <a href="/webdev/Module1/Module1Assignment/headings.html" rel="noopener" 
+          title="early HTML practice and stuff about calculus. Also, link to my repository">Headings.html</a>
+      <a href="https://thegravvytrain.github.io/webdev/" rel="noopener" title="My buddy Grey's website">Grey's Page</a>
+      <a href="/webdev/Module1/Module1Assignment/secret.html" rel="noopener" title="Secret page">Secret</a>
+      <a href="/webdev/Module1/Module1Assignment/aboutMe.html" rel="noopener" title="The missile...">About Me</a>
+      <a href="/webdev/Other/MultiplicationGame_outsourced/index.html" rel="noopener" title="Outsourced multiplication game">Other Multiplication Game</a>
+
+      </nav>
   </div>
 
 
@@ -77,7 +95,7 @@
 
   <article class="columns3">
     <header>
-      <h3>Video Games</h3>
+      <h3 id="first-column-header">Video Games</h3>
     </header>
     <p>
       I have a few different activities I like to do in my free time. Video games are one thing, taking up a
@@ -87,9 +105,7 @@
       from the Grand Theft Auto series, and Need for Speed that I will play sometimes.
     </p>
 
-    <header>
-      <h3>Stock Market</h3>
-    </header>
+    <header><h3>Stock Market</h3></header>
     <p>
       Then, there's the stock market. I began learning about and investing in the stock market back in
       September of 2020, buying fractional shares in companies like 3M, Southwest Airlines, Tesla, and
@@ -111,9 +127,9 @@
       reading about or watching content about cars, vehicles, and general mechanical-related things. I view
       many cars as pieces of art and, one day, after making some substantial money from a programming job (I hope),
       I will be able to afford some pretty neat cars. These are some that I want: </p>
-    <ul>
-      <li>2011-2014 Lexus ISF</li>
-      <li>Lexus GSF</li>
+    <ul id="list-of-cars">
+      <li><a href="#ISF-img1" title="Jump to Lexus ISF picture">2011-2014 Lexus ISF</a></li>
+      <li id="Lexus-GSF"><a href="https://youtu.be/dKX4xzsKuII?t=1" title="Video review of a Lexus GSF" rel="noreferrer noopener" target="_blank">Lexus GSF</a></li>
       <li>a black Chevrolet Tahoe</li>
       <li>2018 or '19 Bentley Continental GT</li>
       <li>Mercury Marauder</li>
@@ -126,15 +142,16 @@
     </p>
   </article>
   <br>
-  
+
   <article>
-    <section style="text-align:center;">
+    <section id="car-pics" style="text-align:center;">
+      
       <div class="tooltip" style="display: inline;">
-        <img class="imagesize" src="/webdev/Images/Lexus-ISF-black.jpg" alt="Black Lexus ISF sedan side view">
-        <span class="tooltiptext">Lexus ISF. Imagine a rear-wheel drive Toyota Camry with a rumbly 5.0L V8 that produces 416 horsepower.</span>
+        <img id="ISF-img1" class="imagesize" src="/webdev/Images/Lexus-ISF-black.jpg" alt="Black Lexus ISF sedan side view">
+        <span class="tooltiptext">Lexus ISF. Imagine a rear-wheel drive Toyota Camry with a rumbly 5.0L V8 that produces 416 horsepower. Its engine was the genesis for all V8 Lexus cars</span>
       </div>
-      <div class="tooltip" style="display: inline;">
-        <img class="imagesize" src="/webdev/Images/Lexus-ISF-black-front.jpg" alt="Black Lexus ISF sedan front view">
+      <div id="ISF-img2" class="tooltip" style="display: inline;" title="Click to see a review of this on Youtube">
+        <a href="https://youtu.be/cStFGWLv1sg" rel="noopener noreferrer" target="_blank"><img class="imagesize" src="/webdev/Images/Lexus-ISF-black-front.jpg" alt="Black Lexus ISF sedan front view"></a>
         <span class="tooltiptext">Lexus ISF</span>
       </div>
       <div class="tooltip" style="display: inline;">
@@ -241,8 +258,7 @@
       document.write("<p>Local time: " + day + " " + hours + ":" + minutes + ":" + seconds + ":" + milliseconds + "   </p>");
 
     </script>
-
-
+   
   </section>
 
 

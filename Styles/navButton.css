@@ -1,18 +1,21 @@
 /*CSS button style class for navigation buttons */
-.navButton {
-    width: 100%;
+.navButton { 
+    width: 101%;
     background-color: #494949;
+    margin-top: -22px;
+    margin-left: -8px;
     padding-top: 0px;
     padding-bottom: 4px;
+    z-index: 5050;
 }
     .navButton nav {
-        padding-left: 5px;
-        padding-right: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
     .navButton a{
-        color: #494949 !important;
+        color: #494949;
         font-family: Arial, Helvetica, sans-serif;
-        font-size:medium;
+        font-size: medium;
         font-weight: 500;
         /* text-transform: capitalize; */
         text-decoration: none;
@@ -32,3 +35,19 @@
         transition: all 0.4s ease 0s;
     }
 
+/* taken from StackOverflow. For future use... */
+.top-bar 
+{
+    position: fixed;
+    min-width: auto;
+    box-shadow: var(--bs-sm);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5050;
+    background-color: var(--black-025);
+    height: 50px;
+    font-family: var(--ff-sans);
+    box-sizing: border-box;
+    border-top: var(--theme-topbar-border-top-size, 3px) solid var(--theme-primary-color);
+}

@@ -1,10 +1,14 @@
 /* This CSS file includes the default style for title, navbar, and general font across all pages.
  * Last updated:  2/1/22 
  */
+html
+{
+  margin-top: 0px;
 
-
+}
 h3 {
   font-size: large;
+  margin-bottom: 5px;
 }
 p {
   font-size: large;
@@ -15,12 +19,12 @@ li {
 
 
 .sitetitle {
-    font-size: 25pt;
+    font-size: 24pt;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color:#494949;
     color:white;
     text-align: center;
-    padding-top: 0px;
+    /* padding-top: 0px; */
 
 }
 
@@ -77,7 +81,12 @@ li {
     column-span: all;
   }
 
+.grayout {
+  color: rgb(155, 155, 155);
+}
 
+
+/******************** navInfo is being phased out of use... *******************/
 /* nav description text container class */
 /* https://www.w3schools.com/css/css_tooltip.asp#:~:text=Basic%20Tooltip&text=HTML%3A%20Use%20a%20container%20element,with%20class%3D%22tooltiptext%22%20. */
 .navInfo {
