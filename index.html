@@ -17,9 +17,7 @@
   <link rel="stylesheet" href="/webdev/Styles/defaultStyle.css">
   <link rel="stylesheet" href="/webdev/Styles/navButton.css">
   <link rel="stylesheet" href="/webdev/Styles/tooltips.css"> <!-- For image descriptions -->
-  <link rel="stylesheet" href="/webdev/Styles/buttonStyle.css"> <!-- for time button -->
-
-  <script src="/webdev/Module1/Module1Exercise/getTime.js"></script>
+  
 
   <style>
     .imagesize 
@@ -51,6 +49,21 @@
       margin-inline-end: 0px;
       padding-inline-start: 40px;
     }
+    .favSiteLink a 
+    {
+      text-decoration: none;
+      color: rgb(16, 16, 211);
+    } 
+    .favSiteLink a:hover 
+    {
+      color: rgb(16, 16, 211);
+      text-decoration:underline;
+    }
+
+    .favSiteLink a:focus 
+    {
+      text-decoration: underline; 
+    }
 
     
   </style>
@@ -62,7 +75,7 @@
     <header>
       <h1 class="sitetitle">Andrew's Web Development Page</h1>
 
-      <span style="margin-left: 8px; font-size: large; font-family: Arial, Helvetica, sans-serif; color: rgb(106, 188, 255);">
+      <span style="margin-left:8px; font-size:large; font-family:Arial,Helvetica,sans-serif; color:rgb(106, 188, 255);">
         Module 3 assignment in progress...</span> 
     </header>
     <nav>
@@ -80,8 +93,7 @@
       </nav>
   </div>
 
-
-  <article style="padding-left: 0.5%; padding-right: 0.5%;">
+ <article style="margin-left: 0.5%; margin-right: 0.5%;">
     <p style="font-size: larger;">
       My name is Christian Blythe but I go by Andrew, my middle name. I am 21 years old as of December 31st, and
       I am studying to be a coder/programmer at Pearl River Community College in Forest County, Mississippi.
@@ -93,7 +105,7 @@
     </p>
   </article>
 
-  <article class="columns3">
+  <article class="columns3" style="margin-left: 0.5%; margin-right: 0.5%;">
     <header>
       <h3 id="first-column-header">Video Games</h3>
     </header>
@@ -173,7 +185,7 @@
       </p>
     </div>
     
-    <section id="car-spec-table">
+    <section id="car-spec-table" style="margin-left: 0.5%; margin-right: 0.5%;">
       <h3>Car Specs</h3>
       <table>
         <tr>
@@ -209,61 +221,45 @@
       </table>
     </section>
   </article>
+  <hr>
 
-  <!-- ************************************ Date and time below **************************************** -->
-  <section>
-    <hr>
-    <header>
-      <h2 style="text-align: center;">Date and Time</h2>
-    </header>
-    <p>
-      <button class="example_c" type="button" onclick="document.getElementById('timeHere').innerHTML = getTime()">
-        Display current time</button> <span id="timeHere"></span>
+  <section style="margin-left: 0.5%; margin-right: 0.5%;">
+    <header><h2>"Favorite" Website I use frequently</h2></header>
+    <p class="favSiteLink" id="favSite">
+      I use <a href="https://www.youtube.com" target="_blank" rel="noreferrer noopener" title="Visit Youtube, a site I use regularly">Youtube</a> 
+      a lot to research and catch up on information about video games and the stock market. I also use the site when I am bored or simply 
+      want some background noise.
     </p>
-
-    <script>
-      currentDateTime = new Date(); //variable - new date object
-      localTime = currentDateTime.toString(); //to strings for the date
-      GMT_time = currentDateTime.toGMTString();
-
-      //display/write time to the webpage
-      document.write("<p>Local time: " + localTime + "                  </p>");
-      document.write("<p>Universal time: " + GMT_time + "                  </p>");
-
-      hours = currentDateTime.getHours();
-      minutes = currentDateTime.getMinutes();
-      seconds = currentDateTime.getSeconds();
-      milliseconds = currentDateTime.getMilliseconds();
-
-      dayNum = currentDateTime.getDay(); //gets day as int value
-      day = "";
-
-      //converting int value to word
-      if (dayNum == 1)
-        day = "Monday";
-      else if (dayNum == 2)
-        day = "Tuesday";
-      else if (dayNum == 3)
-        day = "Wednesday";
-      else if (dayNum == 4)
-        day = "Thursday";
-      else if (dayNum == 5)
-        day = "Friday";
-      else if (dayNum == 6)
-        day = "Saturday";
-      else
-        day = "Sunday";
-
-      //new, simple local time
-      document.write("<p>Local time: " + day + " " + hours + ":" + minutes + ":" + seconds + ":" + milliseconds + "   </p>");
-
-    </script>
-   
   </section>
+
+  
 
 
   <footer>
     <hr />
+    <p id="contactMe" class="favSiteLink">
+      Contact me:&nbsp;<button id="mmmButton" title="click to show email" type="button" onclick="revealMMM()" style="width: 90px; padding: 2px 5px 2px 5px;">reveal email</button>&nbsp;
+      <span id="mmm"></span>  
+
+      <script>
+        function revealMMM()
+        {
+          if (document.getElementById('mmm2'))
+          {
+            document.getElementById('mmm').innerHTML = "";
+            document.getElementById("mmmButton").innerText = "reveal email";
+          }
+          else
+          {
+            //I'm showing the email this way in hopes that web crawlers won't be able to decipher it
+            document.getElementById("mmm").innerHTML = 
+            "<a id=\"mmm2\" href" + "=\"" + "ma" + "il" + "to" + ":" + "christian." + "blythe." + "30" + "@" + "student." + "prcc." + "e" + "du\"" 
+            + ">" + "christian." + "blythe." + "30" + "@" + "student." + "prcc." + "edu" + "</a>";
+            document.getElementById("mmmButton").innerText = "hide email";
+          }
+        }
+      </script>
+    </p>
     <script>//JS thing for a last modified feature
       document.write("Last modified: " + document.lastModified);            
     </script>

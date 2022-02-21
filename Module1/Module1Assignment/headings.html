@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="/webdev/Styles/defaultStyle.css">
   <link rel="stylesheet" href="buttonsFirstEver.css">
   
+  <link rel="stylesheet" href="/webdev/Styles/buttonStyle.css"> <!-- for time button -->
+  <script src="/webdev/Module1/Module1Exercise/getTime.js"></script> <!-- for time functionality -->
 
 </head>
 
@@ -31,8 +33,7 @@
       </p> -->
     </header>
     <nav>
-      <a class="navInfo" href="/webdev/index.html" rel="nofollow noopener">Home
-        <span class="navInfotext">Website home</span></a>
+      <a href="/webdev/index.html" rel="nofollow noopener" title="Website Home">Home</a> 
     </nav>
   </div>
 
@@ -132,10 +133,16 @@
 
     </section>
 
+    <!-- ************************************ Date and time below **************************************** -->
     <section>
+      <hr>
       <header>
-        <h3>Current Day and Time</h3>
+        <h2 style="text-align: center;">Date and Time</h2>
       </header>
+      <p>
+        <button class="example_c" type="button" onclick="document.getElementById('timeHere').innerHTML = getTime()">
+          Display current time</button> <span id="timeHere"></span>
+      </p>
 
       <script>
         currentDateTime = new Date(); //variable - new date object

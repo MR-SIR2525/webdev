@@ -27,15 +27,15 @@ function checkAnswer()
 
         if (guess == answer)
         {
-            document.getElementById('response').innerHTML = "Your answer is correct";
+            document.getElementById('response').innerText = "Your answer is correct";
         }
         else if (guess != answer)
         {
-            document.getElementById('response').innerHTML = "Sorry, that's not right";
+            document.getElementById('response').innerText = "Sorry, that's not right";
 
         }
         else
-            document.getElementById('response').innerHTML = "Unknown error";
+            document.getElementById('response').innerText = "Unknown error";
         
         attempts++;
 
