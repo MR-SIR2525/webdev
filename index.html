@@ -75,8 +75,8 @@
     <header>
       <h1 class="sitetitle">Andrew's Web Development Page</h1>
 
-      <span style="margin-left:8px; font-size:large; font-family:Arial,Helvetica,sans-serif; color:rgb(106, 188, 255);">
-        Module 3 assignment in progress...</span> 
+      <!-- <span style="margin-left:8px; font-size:large; font-family:Arial,Helvetica,sans-serif; color:rgb(106, 188, 255);">
+        Alert message here</span>  -->
     </header>
     <nav>
       <a href="/webdev/index.html" rel="noopener" title="Website Home">Home</a>
@@ -221,24 +221,32 @@
       </table>
     </section>
   </article>
-  <hr>
+  <br>
 
-  <section style="margin-left: 0.5%; margin-right: 0.5%;">
+  <section id="module3Assignment" style="margin-left: 0.5%; margin-right: 0.5%;">
     <header><h2>"Favorite" Website I use frequently</h2></header>
     <p class="favSiteLink" id="favSite">
       I use <a href="https://www.youtube.com" target="_blank" rel="noreferrer noopener" title="Visit Youtube, a site I use regularly">Youtube</a> 
       a lot to research and catch up on information about video games and the stock market. I also use the site when I am bored or simply 
       want some background noise.
     </p>
+    <br>
+
+    <article>
+      <header><h2>Jeremy Clarkson Explains Cars</h2></header>
+      <video src="Images/Clarkson-explains-cars.mp4" width="30%" title="Jeremy Clarkson Explains Cars" controls></video>
+
+    </article>
   </section>
 
+  
   
 
 
   <footer>
     <hr />
     <p id="contactMe" class="favSiteLink">
-      Contact me:&nbsp;<button id="mmmButton" title="click to show email" type="button" onclick="revealMMM()" style="width: 90px; padding: 2px 5px 2px 5px;">reveal email</button>&nbsp;
+      If you want to contact me:&nbsp;<button id="mmmButton" title="click to show email" type="button" onclick="revealMMM()" style="width: 90px; padding: 2px 5px 2px 5px;">reveal email</button>&nbsp;
       <span id="mmm"></span>  
 
       <script>
@@ -259,11 +267,14 @@
           }
         }
       </script>
-    </p>
+      <br>
+      </p>  
+      <p id="lastModified" style="text-align: right; float: right;"></p>
+
+
     <script>//JS thing for a last modified feature
-      document.write("Last modified: " + document.lastModified);            
+      document.getElementById("lastModified").innerText = ("Last modified: " + document.lastModified);            
     </script>
-    <!-- Reminder to me: maybe put "last modified" at the top somewhere? -->
 
 
   </footer>
