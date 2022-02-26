@@ -5,10 +5,10 @@ html
 {
   margin-top: 0px;
 }
-/* body
+body
 {
-  margin: 0px 0px 0px 0px;
-} */
+	background-color:rgb(255, 255, 255);
+}
 h3 {
   font-size: large;
   margin-bottom: 5px;
@@ -124,3 +124,21 @@ li {
     pointer-events: none; /* Enables click-through */
     opacity: 1; /* Fade in effect */
   }
+
+/* for sub index-type pages */
+.listNav a:link, :visited
+{
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(28, 76, 235);
+    text-decoration: none;
+}
+.listNav a:hover, :focus
+{
+    border: 2px solid rgba(48, 48, 48, 0.87);
+	border-radius: 2px;
+    padding: 2px;
+}
+.listNav a:active
+{
+	color: rgba(48, 48, 48, 0.87);
+}

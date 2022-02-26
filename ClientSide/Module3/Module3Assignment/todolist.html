@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/webdev/Styles/navButton.css">
+    <style>
+        #listContent {
+            width: 80%;
+            border: 2px solid black;
+            border-radius: 3px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 7px;
+            padding: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navButton" id="nav-and-title" style="margin-top: -8px; padding-top: 2px;">
+        <nav>
+            <a href="../" title="Back to Client Side Home">↩ Client Side Directory</a>
+        </nav>
+    </div>
+
+    <h1 style="text-align: center; margin-bottom: 2px;">To Do List</h1>
+    <div id="listContent">
+        <button style="float: right;" onclick="clearList();" title="Clear the whole list">Clear List</button>
+        <form name="theform">
+            Item:
+            <input id="inputField1" name="newname" size="20" autofocus="autofocus">
+            <input id="button1" type="submit" name="addname" value="Add" onclick="toDoList();  return false">
+            <!-- was within onclick above:    clearInputBox(inputField1); -->
+            <br>
+            <br>
+            <textarea cols="60" rows="10" name="sorted">
+                To do list appears here
+            </textarea>
+        </form>
+    </div>
+
+
+    <script src="listscript.js"></script>
+</body>
+
+</html>

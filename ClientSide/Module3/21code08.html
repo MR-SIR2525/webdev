@@ -16,9 +16,11 @@
     </form>
 
     <script>
-      function addText() {
+      function addText() 
+      {
         if (!document.getElementById) 
           return;
+          
         var sentence=document.changeform.sentence.value;
         var node=document.createTextNode(" " + sentence);
         document.getElementById("paragraph1").appendChild(node);
