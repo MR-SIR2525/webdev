@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Array Sorting Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/webdev/Styles/navButton.css">
+</head>
+
+<body>
+  <div class="navButton" style="margin-top: -8px; padding-top: 3px;">
+    <a href="../">↩ Client Side Module 3</a>
+  </div>
+  <h1>Sorting String Arrays</h1>
+  <p>
+    Enter two or more names in the field below (one at a time),
+    and the sorted list of names will appear in the
+    textarea. </p>
+
+
+  <form name="theform">
+    Name:
+    <input id="inputField1" name="newname" size="20" autofocus="autofocus">
+    <input id="button1" type="submit" name="addname" value="Add" onclick="SortNames();  return false">
+    <!-- was within onclick above:    clearInputBox(inputField1); -->
+    <br>
+
+    <h2>Sorted Names</h2>
+    <textarea cols="60" rows="10" name="sorted">
+        The sorted names will appear here.
+    </textarea>
+  </form>
+
+  <script src="sortNames.js"></script>
+</body>
+
+</html>
