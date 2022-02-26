@@ -36,6 +36,7 @@ function clearList()
     {
         names.pop();
     }
+    numbernames = 0;
     document.theform.sorted.value = "List was cleared";
 
 }
