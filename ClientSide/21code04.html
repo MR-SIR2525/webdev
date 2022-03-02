@@ -1,0 +1,71 @@
+<!-- Supposed to modify this -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Positioning Elements with JavaScript</title>
+	<link rel="stylesheet" href="/webdev/Styles/defaultStyle.css">
+	<link rel="stylesheet" href="/webdev/Styles/navButton.css">
+
+	<style>
+		.buttons 
+		{
+			text-align: center;
+		}
+
+		#square {
+			position: absolute;
+			top: auto;
+			left: 450px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 200px;
+			height: 200px;
+			border: 2px solid black;
+			padding: 10px;
+			background-color: #e0e0e0;
+		}
+
+		div {
+			padding: 10px;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div class="navButton" style="margin: -8px;">
+		<a href="../" title="module 3 home">↩ Client Side Module 3</a>
+	</div>
+	
+	<h1 style="margin-top: 6px;">Positioning Elements</h1>
+	<div class="buttons" >
+		<button type="button" name="SubtractOne" onclick="subtractOne()" title="Subtract one from the counter">Subtract One</button>
+		<button type="button" name="AddOne" onclick="addOne()" title="Add one to the counter">Add One</button>
+	</div>
+
+	<div class="buttons">
+		<button type="button" name="left" onclick="pos(-1,0);">Left</button>
+		<button type="button" name="right" onclick="pos(1,0);">Right</button>
+		<button type="button" name="up" onclick="pos(0,-1);">Up</button>
+		<button type="button" name="down" onclick="pos(0,1);">Down</button>
+		<button type="button" name="hide" onclick="hideSquare();">Hide</button>
+		<button type="button" name="show" onclick="showSquare();">Show</button>
+	</div>
+	<hr style="display: block;">
+	<div id="square">
+		This square is an absolutely positioned layer
+		that you can move using the buttons above.
+		<p id="counter" style="text-align: center;">Counter<br></p>
+	</div>
+
+	<script src="21code05.js"></script>
+	<script src="../Module3Assignment/counterScript.js"></script>
+	<script>
+		document.getElementById("counter").innerHTML = "Counter<br>0";
+	</script>
+</body>
+
+</html>
