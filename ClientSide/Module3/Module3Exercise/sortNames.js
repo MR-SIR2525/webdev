@@ -23,7 +23,6 @@ function SortNames()
       }
       
       document.theform.sorted.value = thingToPrint;
-
       // document.theform.sorted.value = names.join("\n"); //original
    }
    
