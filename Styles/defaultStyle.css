@@ -1,17 +1,18 @@
 /* This CSS file includes the default style for title, navbar, and general font across all pages.
- * Last updated:  2/1/22 
+ * Last updated:  2/1/22
  */
-html
-{
-  margin-top: 0px;
+html {
+	margin-top: 0px;
 }
-body
-{
-	background-color:rgb(255, 255, 255);
+body {
+	overflow-x: hidden;
+	overflow-y: auto;
 }
-h3 {
-  font-size: large;
-  margin-bottom: 5px;
+
+h3
+{
+	font-size: large;
+	margin-bottom: 5px;
 }
 p {
   font-size: large;
@@ -19,51 +20,129 @@ p {
 li {
   font-size: large;
 }
+.sticky
+{
+  position: sticky;
+  top: 0;
+}
 
 
 .sitetitle {
-    font-size: 24pt;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color:#494949;
-    color:white;
-    text-align: center;
-    /* padding-top: 0px; */
-
+  font-size: 24pt;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color:#494949;
+  color:rgb(182, 182, 182);
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom:7px;
+  /* padding-top: 0px; */
 }
+
+#watermark
+{
+  z-index: -1;
+  position: absolute;
+  width: 12%;
+  height: auto;
+  opacity: 150%;
+}
+
+/********* Navigation styling *********/
+.navButton /*aka navbar*/
+{
+  width: 101%;
+  background-color: #494949;
+  /* margin: unset; */
+  margin-top: -23px;
+  margin-left: -8px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  overflow: hidden; /*Not sure what this means but it doesn't look right without it*/
+  z-index: 5050;
+}
+.navButton nav {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navButton a, .subnavbtn{
+    /* color: #494949; */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    text-decoration: none;
+    /* background: #dad8d8; */
+    background: #494949;
+    float:left;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    /* border: 2px solid #494949 !important; */
+    border: unset;
+    /* display: inline-block; */
+}
+.navButton a:hover, .subnavbtn:hover{
+    color: #ffffff !important;
+    background: #797979;
+    /* border-color: #3b6df6 !important; *//* I think I like no border now*/
+    border-radius: 0px;
+    /* transition: all 0.31s ease 0s; */
+}
+
+/**** subnavigation menu ****/
+.subnav {
+  /* display: unset; Couldnt figure out why this fixes it...  When in doubt, unset lol */
+  overflow: hidden;
+  /* margin: unset;
+  padding: unset; */
+  float: left;
+}
+
+/* subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: fixed;
+  margin-top: 3.27em;
+  background-color: #a1a1a1;
+  box-shadow: 3px 5px 5px rgb(97, 97, 97);
+  width: 107px;
+  padding: 0px;
+  z-index: 1;
+}
+/* subnav links */
+.subnav-content a {
+  float: none;
+  color: white;
+  background-color: inherit;
+  /* display: list-item; */
+  display: block;
+  text-align: left;
+  margin: 0px;
+  border: unset;
+  text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: #858585;
+  color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+/********** End of navigation style  **********/
+
 
 .italic {
   font-style: italic;
 }
 
-/* I currently use the file "/Styles/navButton.css" for my nav*/
-/*navigation style by Dr. Preston*/
-.navbar {
-    overflow: hidden;    
-    position: fixed;
-    top: 80px;
-    width: 100%;
-    }
 
-  .navbar a {
-    float: left;
-    display: block;
-    color: #dc143c;
-    text-align: center;
-    padding: 15px 18px;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  .navbar a:hover {
-    color: #ffffff;
-    background-color: #666666;
-  }
-  .container {
-    padding: 18px;
-    margin-top: 25px;
-    height: 2000px;
-  }
-
-/* 3 column format (suggested use in <article> )*/
+/* 3 column format (suggested use in <article>) */
 .columns3 {
   column-count: 3;
   column-gap: 21px;
@@ -89,7 +168,49 @@ li {
 }
 
 
-/******************** navInfo is being phased out of use... *******************/
+/* for sub index-type pages */
+.listNav a:link, :visited
+{
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(28, 76, 235);
+    text-decoration: none;
+}
+.listNav a:hover, :focus
+{
+    border: 2px solid rgba(48, 48, 48, 0.87);
+	border-radius: 2px;
+    padding: 2px;
+}
+.listNav a:active
+{
+	color: rgba(48, 48, 48, 0.87);
+}
+
+
+
+
+
+
+
+
+/* taken from StackOverflow. For future use... */
+.top-bar
+{
+  position: fixed;
+  min-width: auto;
+  box-shadow: var(--bs-sm);
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5050;
+  background-color: var(--black-025);
+  height: 50px;
+  font-family: var(--ff-sans);
+  box-sizing: border-box;
+  border-top: var(--theme-topbar-border-top-size, 3px) solid var(--theme-primary-color);
+}
+
+/******************** navInfo is not really used anymore... *******************/
 /* nav description text container class */
 /* https://www.w3schools.com/css/css_tooltip.asp#:~:text=Basic%20Tooltip&text=HTML%3A%20Use%20a%20container%20element,with%20class%3D%22tooltiptext%22%20. */
 .navInfo {
@@ -111,7 +232,7 @@ li {
     /* fade in effect */
     opacity: 0;
     transition: opacity 0.40s;
-    
+
     /* Positioning the tooltip text */
     position: absolute;
     z-index: 1;
@@ -124,21 +245,3 @@ li {
     pointer-events: none; /* Enables click-through */
     opacity: 1; /* Fade in effect */
   }
-
-/* for sub index-type pages */
-.listNav a:link, :visited
-{
-    font-family:Arial, Helvetica, sans-serif;
-    color: rgb(28, 76, 235);
-    text-decoration: none;
-}
-.listNav a:hover, :focus
-{
-    border: 2px solid rgba(48, 48, 48, 0.87);
-	border-radius: 2px;
-    padding: 2px;
-}
-.listNav a:active
-{
-	color: rgba(48, 48, 48, 0.87);
-}
