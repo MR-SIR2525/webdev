@@ -23,3 +23,29 @@ https://www.prepostseo.com/image-to-text
 
 Python inside HTML?
 https://www.digi.com/resources/documentation/digidocs/90001537/references/r_python_inside_html.htm?TocPath=Categories%7CWeb%20Access%7C_____2#:~:text=It%20is%20possible%20to%20run,be%20executed%20at%20run%20time.
+
+https://webdesign.tutsplus.com/tutorials/how-to-integrate-no-captcha-recaptcha-in-your-website--cms-230241
+
+How to display divs horizontally?
+https://stackoverflow.com/questions/25919796/how-to-display-divs-horizontally
+
+HTML span align center 
+https://stackoverflow.com/questions/8392211/html-span-align-center-not-working
+
+Sub-navigation 
+https://www.w3schools.com/howto/howto_css_subnav.asp
+
+Image Map generator
+https://www.image-map.net/
+
+Tricky nav for mobile
+https://codepen.io/Sidstumple/pen/RwNZYBe?editors=1000
+
+CSS Positioning (sticky)
+https://www.w3schools.com/css/css_positioning.asp
+
+Dropdown menu
+https://www.w3schools.com/howto/howto_css_dropdown.asp
+
+Cursor styles
+https://developer.mozilla.org/en-US/docs/Web/CSS/cursor

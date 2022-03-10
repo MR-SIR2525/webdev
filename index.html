@@ -15,9 +15,8 @@
   <title>Andrew's Page - Home</title>
 
   <link rel="stylesheet" href="/webdev/Styles/defaultStyle.css">
-  <link rel="stylesheet" href="/webdev/Styles/navButton.css">
   <link rel="stylesheet" href="/webdev/Styles/tooltips.css"> <!-- For image descriptions -->
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   <!--font awesome icons-->
 
   <style>
     .imagesize 
@@ -63,39 +62,53 @@
     .favSiteLink a:focus 
     {
       text-decoration: underline; 
-    }
-
-    
+    }    
   </style>
-
+  <!-- TODO:  maybe make only navigation sticky instead of whole top bar? -->
 </head>
 
 <body>
-  <div class="navButton" id="nav-and-title">
+  <div class="navButton sticky" id="nav-and-title">
     <header>
       <h1 class="sitetitle">Andrew's Web Development Page</h1>
 
       <!-- <span style="margin-left:8px; font-size:large; font-family:Arial,Helvetica,sans-serif; color:rgb(106, 188, 255);">
         Alert message here</span>  -->
     </header>
-    <nav>
-      <a href="/webdev/index.html" rel="noopener" title="Website Home">Home</a>
-      <a href="/webdev/Module2/index.html" rel="noopener" title="HTML Module 2">Module 2</a>
-      <a href="/webdev/Module3/index.html" rel="noopener" title="HTML Module 3">Module 3</a>
-      <a href="/webdev/ClientSide/index.html" rel="noopener" title="Client Side">Client Side</a>
-      <a href="/webdev/Module1/Module1Assignment/headings.html" rel="noopener" 
-          title="early HTML practice and stuff about calculus. Also, link to my repository">Headings.html</a>
-      <a href="https://thegravvytrain.github.io/webdev/" rel="noopener" title="My buddy Grey's website">Grey's Page</a>
-      <a href="/webdev/Module1/Module1Assignment/secret.html" rel="noopener" title="Secret page">Secret</a>
-      <a href="/webdev/Module1/Module1Assignment/aboutMe.html" rel="noopener" title="The missile...">About Me</a>
-      <a href="/webdev/Other/MultiplicationGame_outsourced/index.html" rel="noopener" title="Outsourced multiplication game">Other Multiplication Game</a>
 
-      </nav>
-  </div>
+    <div id="navActual">
+      <nav>
+        <a href="/webdev/index.html" rel="noopener" title="Website Home">Home</a>
+        <div class="subnav">
+          <a class="subnavbtn" style="cursor: default;">HTML Webdev <i class="fa fa-caret-down"></i></a>
+          <div class="subnav-content" style="width: 8.93em;">
+            <a href="/webdev/Module2/index.html" rel="noopener">Module 2</a>
+            <a href="/webdev/Module3/index.html" rel="noopener">Module 3</a>
+            <a href="/webdev/Module4/index.html" rel="noopener">Module 4</a>
+          </div>
+        </div>
+        <div class="subnav">
+          <a href="/webdev/ClientSide/index.html" class="subnavbtn"rel="noopener"title="Visit Client Side page">Client Side <i class="fa fa-caret-down"></i></a>
+          <div class="subnav-content" style="width: 7.2em;">
+            <a href="/webdev/ClientSide/Module2/" rel="noopener">Module 2</a>
+            <a href="/webdev/ClientSide/Module3/" rel="noopener">Module 3</a>
+            <a href="/webdev/ClientSide/Module4/" rel="noopener">Module 4</a>
+          </div>
+        </div>
+        <a href="/webdev/Module1/Module1Assignment/headings.html" rel="noopener" 
+            title="early HTML practice and stuff about calculus. Also, link to my repository">Headings.html</a>
+        <a href="https://thegravvytrain.github.io/webdev/" rel="noopener" title="My buddy Grey's website">Grey's Page</a>
+        <a href="/webdev/Module1/Module1Assignment/secret.html" rel="noopener" title="Secret page" style="cursor: progress;">Secret</a>
+        <a href="/webdev/Module1/Module1Assignment/aboutMe.html" rel="noopener" title="The missile...">About Me</a>
+        </nav>
+    </div> <!--End of #navActual-->
+  </div> <!--End of whole nav bar thing-->
+
+  <img id="watermark" style="width: 30%;" src="/webdev/Images/watermark.png" alt="watermark for andrew's webdev">
 
  <article style="margin-left: 0.5%; margin-right: 0.5%;">
     <p style="font-size: larger;">
-      My name is Christian Blythe but I go by Andrew, my middle name. I am 21 years old as of December 31st, and
+      My name is Christian Blythe but I go by Andrew, my middle name. I am 21 years old as of December 30th, and
       I am studying to be a coder/programmer at Pearl River Community College in Forest County, Mississippi.
       I work regularly for my father at his mechanic shop on various gas-powered automobiles, doing anything
       from brakes to replacing a radiator or alternator. I also work on my car, sometimes for fun, sometimes
@@ -162,8 +175,8 @@
         <img id="ISF-img1" class="imagesize" src="/webdev/Images/Lexus-ISF-black.jpg" alt="Black Lexus ISF sedan side view">
         <span class="tooltiptext">Lexus ISF. Imagine a rear-wheel drive Toyota Camry with a rumbly 5.0L V8 that produces 416 horsepower. Its engine was the genesis for all V8 Lexus cars</span>
       </div>
-      <div id="ISF-img2" class="tooltip" style="display: inline;" title="Click to see a review of this on Youtube">
-        <a href="https://youtu.be/cStFGWLv1sg" rel="noopener noreferrer" target="_blank"><img class="imagesize" src="/webdev/Images/Lexus-ISF-black-front.jpg" alt="Black Lexus ISF sedan front view"></a>
+      <div class="tooltip" style="display: inline;" title="Click to see a review of this on Youtube">
+        <a id="ISF-img2" href="https://youtu.be/cStFGWLv1sg" rel="noopener noreferrer" target="_blank"><img class="imagesize" src="/webdev/Images/Lexus-ISF-black-front.jpg" alt="Black Lexus ISF sedan front view"></a>
         <span class="tooltiptext">Lexus ISF</span>
       </div>
       <div class="tooltip" style="display: inline;">
