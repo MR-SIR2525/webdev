@@ -1,0 +1,95 @@
+.row
+{
+  margin: 4px 4px 6px 4px;
+  display: block;      
+}
+
+.row div {
+  position: relative;
+  width: 19%;
+  height: 100px;
+  border: 3px solid #000;
+  color: black;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 5px;
+  padding: 3px;
+  overflow: auto;
+}
+
+.squareOfImages
+{
+  position:absolute;
+  /* display: grid;  
+  column-count: auto;
+  column-gap: 1em;
+  row-gap: 1em; */
+  
+}
+.squareOfImages>span>img
+{
+  display:inline;
+  width: 25%;
+}
+
+
+
+
+div#d1 {
+  background-color: red;
+  display: inline-block;
+}
+div#d2 {
+  background-color: green;
+  display: inline-block;
+}
+div#d3 {
+  background-color: blue;
+  display: inline-block;
+}
+div#d4 {
+  background-color: yellow;
+  display: inline-block;
+}
+div#d5
+{
+    background-color: rgb(150, 0, 0);
+    color: white;
+    display: inline-block;
+    height: 150px;
+}
+div#d6
+{
+    background-color: rgb(0, 71, 0);
+    color: white;
+    display: inline-block;
+    height: 150px;
+
+}
+div#d7
+{
+    background-color: rgb(0, 0, 139);
+    color: white;
+    font-size: larger;
+    display: inline-block;
+    height: 150px;
+
+}
+div#d8
+{
+    background-color: rgb(148, 148, 1);
+    color: white;
+    display: inline-block;
+    height: 150px;
+
+}
+
+.maincontent 
+{
+    width: 70%;
+    padding: 0.5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: solid 1px grey;
+}
