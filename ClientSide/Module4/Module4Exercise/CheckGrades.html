@@ -5,17 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/webdev/Styles/defaultStyle.css">
     <script src="gradeConditionals.js"></script>
 
     <title>if/else Check Grades</title>
 </head>
 
 <body>
+    <div class="navButton" style="margin-top: -8px; padding-top: 3px;">
+        <a href="../" title="back to Client Side Module 4">↩  Module 4</a>
+    </div>
     <h1>Letter Grades Finder</h1>
     <div>
-        <p>Enter your grade as number and press submit.</p>
-        <input name="grade" id="grade" size="3">
-        <input type="button" id="getGrade" value="Get Letter Grade" onclick="getLetterGrade()">
+        <form onclick="return false;">
+            <p>Enter your grade as number and press submit.</p>
+            <input name="grade" id="grade" size="3" autofocus="autofocus">
+            <input type="submit" id="getGrade" value="Get Letter Grade" onclick="getLetterGrade();">
+        </form>
+        
 
         <p id="message"></p>
 
