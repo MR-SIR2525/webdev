@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+
+    <link rel="stylesheet" href="/webdev/Styles/defaultStyle.css">
+    <style>
+        #result
+        {
+            /* margin: 5px; */
+            font-size: large;         
+        }
+        #instructions
+        {
+            /* margin-bottom: 5px; */
+            font-size: large;
+        }
+        #settingsForm
+        {
+            border: 2px solid rgb(87, 87, 87);
+            background-color: rgb(199, 199, 199);
+            border-radius: 3px;
+            padding: 0px 5px 5px 5px;
+            width: fit-content;
+            min-width: 25%;
+            min-height: 150px;
+            display: none;
+            text-align: center;
+            font-weight: 550;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #settingsForm>h3 
+        {
+            margin-top: 4px;
+        }
+        
+        #gameControls > button
+        {
+            background-color: lightgrey;
+            padding: 6px 10px;
+            border: unset;
+        }
+        #gameControls>button:hover, #gameControls>button:active
+        {
+            background-color: grey;
+            color:cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <div class="navButton" style="margin-top: -8px; padding-top: 3px;">
+        <a href="../" title="back to Client Side Module 4">↩  Module 4</a>
+    </div>
+
+    <div id="gameControls" style="margin: 3px; text-align: right;">
+        <button onclick="resetGame()" id="resetGamebtn" title="Start a new game">New Game</button>
+        <button onclick="showSettings()" id="showSettingsbtn" title="Customize game parameters">Game Settings</button>
+    </div>
+    
+    
+    <h1 style="text-align: center;">Guess the number!</h1>
+
+    <div style="text-align: center;" id="theForm'sBox">
+        <p id="instructions">
+            What number am I thinking of? It's something 1-<span id="numberCap">-</span>. 
+            You have <span id="attemptsRemaining">-</span> guesses. <span id="debuggy"> </span>
+        </p>
+
+        <form name="theform" onclick="return false;">
+            Your guess: 
+            <input id="inputField1" name="guessEntry" size="20" autofocus="autofocus">
+            <input id="button1" type="submit" name="guessButton" onclick="checkGuess(); return false;">
+            <br>
+        </form>
+
+        <p id="result">&nbsp;</p>
+    </div>
+    
+
+    
+    <form id="settingsForm" name="settingsForm" onclick="return false;">
+        <h3>Game Settings</h3>
+        Number range:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 - <input name="settingNumberCap" id="settingNumberCap" size="5" title="1 through [your choice]">
+        <br>
+        Maximum Attempts:&nbsp;&nbsp;<input name="settingMaxAttempts" id="settingMaxAttempts" size="5">
+        <br>
+        <br>
+        <button onclick="resetGameCustom(); return false">Confirm My Settings</button>
+        <br>
+        <span style="font-size: small;">Refresh the page anytime to restore original settings.</span>
+    </form>
+
+    
+    
+    
+
+
+    <script src="guessingGame.js"></script>
+</body>
+</html>
