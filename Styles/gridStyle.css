@@ -1,0 +1,193 @@
+/* Andrew Blythe
+ * Web Development
+ * gridStyle.css
+ * - created 3-27-22 for Module 5 assignment where I had to use a grid layout for my webpage 
+**/
+/* idk what this means ↓ */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+#notice {
+    background: rgb(238, 235, 69);
+    padding:5px;
+    display: none;
+}
+#notice>h4 { 
+    margin: 3px;
+}
+#notice>p {
+    margin: 2px;
+    font-weight: 550;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: larger;
+    margin: 5px;
+}
+h3 {
+	font-size: larger;
+	margin-bottom: 5px;
+    margin-top: 5px;
+}
+/* p {
+  font-size: large;
+} */
+li {
+  font-size: large;
+}
+
+.sticky {
+  position: sticky !important;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 12% auto 12%;
+    grid-template-areas:
+        'header header header'
+        'menu   main   right'
+        'footer footer footer';
+    gap: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+.grid-container> .box {
+    padding: 1.5% 1%;
+    /* diagnostic border to see where boxes are */
+    /* border: 2px dotted black;  */
+}
+/* header section */
+.item1 {
+    grid-area: header;
+    background-color:#494949 !important;
+    padding: 4px 4px 0 4px !important;
+    border: none !important;
+    top: 0;
+    z-index: 100;   
+}
+
+.item2 {
+    grid-area: menu;
+    top: 4em;
+}
+.item2 > a {
+    display: block;
+}
+
+.item3 {
+    grid-area: main;
+}
+
+.item4 {
+    grid-area: right;
+}
+
+.item5 {
+    grid-area: footer;
+    padding: 1.5% !important;
+}
+
+
+
+.sitetitle {
+    font-size: 24pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* background-color:#494949; */
+    color:rgb(182, 182, 182) !important;
+    color: white;
+    text-align: center;
+    margin: 4px 0px 7px 0px;
+}
+
+/********* Navigation styling *********/
+/*formerly called "navButton"*/
+/* .navbar 
+{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  overflow: hidden; 
+  z-index: 5050;
+} */
+/* refer to "item1" for more */
+.navbar nav {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbar a, .subnav {
+    /* color: #494949; */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    text-decoration: none;
+    /* background: #dad8d8; */
+    background: #494949;
+    float:left;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    /* border: 2px solid #494949 !important; */
+    border: unset;
+    /* display: inline-block; */
+}
+.subnav>a {
+    padding: 0;
+    background: unset;
+}
+
+.navbar a:hover, .subnav:hover{
+    color: #ffffff !important;
+    background: #797979;
+    border-radius: 0px;
+    transition: all 0.31s ease 0s;
+}
+
+/***** subnavigation menu *****/
+.subnav {
+  overflow: hidden;
+}
+
+/* subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: fixed;
+  margin-top: 1.76em;
+  margin-left: -12px;
+  background-color: #a1a1a1;
+  box-shadow: 3px 5px 5px rgb(97, 97, 97);
+  min-width: 130px; 
+  padding: 0px;
+  z-index: 1;
+}
+/* subnav links */
+.subnav-content a {
+  float: none;
+  color: white;
+  background-color: inherit;
+  /* display: list-item; */
+  display: block;
+  text-align: left;
+  margin: 0px;
+  border: unset;
+  text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: #858585;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover > .subnav-content {
+  display: block;
+}
+
+/********** End of navigation style  **********/
