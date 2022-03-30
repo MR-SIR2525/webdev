@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="tipCalcStyle.css">
+    
+</head>
+
+<body>
+    
+
+    <div class="flex-container">
+        <div class="box" id="title">Tip Calculator</div>
+
+        <div class="box" id="calculatorBody">
+            <form id="calcForm" name="calcform" onclick="return false;" >
+                <input id="billEntry" name="billEntry" size="10" autofocus="autofocus" 
+                    placeholder="Total Bill $" type="number">
+                <input id="tipEntry" name="tipEntry" size="10" 
+                    placeholder="Tip %" type="number">
+                <br>
+                <button onclick="calculateTip()">Calculate</button>
+            </form>
+
+            <div id="resultsBox">
+                <table id="results">
+                    <tr>
+                        <td class="resultLabel">Tip: </td>
+                        <td>$<span id="tipHere">0.00</span></td>
+                    </tr>
+                    <tr>
+                        <td class="resultLabel">Grand Total: </td>
+                        <td>$<span id="totalHere">0.00</span></td>
+                    </tr>
+                </table>
+            </div>
+            
+                
+        </div>
+    </div>
+    <script src="tipCalc.js"></script>
+</body>
+
+
+</html>

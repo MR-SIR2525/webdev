@@ -1,0 +1,79 @@
+/* tipCalcStyle.css, intended to be used by tipCalculator.html */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: DodgerBlue;
+}
+.flex-container > .box 
+{
+    margin: 4px;
+    border-radius: 7px;
+    padding: 15px 27px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#title {
+    background-color: #FF9500;
+    color: white;
+    font-size:xx-large;
+    font-weight: 550;
+    text-align: center;
+    box-shadow: inset 0 0 10px #929292;
+}
+#calculatorBody {
+    background-color: #505050;
+    min-width: 30%;
+    min-height: 50%;
+    box-shadow: inset 0 0 10px #1a1a1a;
+}
+#calcForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#calcForm input {
+    width: 40%;
+    padding: 8px;
+    margin: 4px;
+    background-color: #D4D4D2;
+    color: #1C1C1C;
+    border: unset;
+    border-radius: 4px;
+}
+#calcForm button {
+    border: unset;
+    box-shadow: inherit;
+    background-color: white;
+    padding: 8px;
+    width: 20%;
+    border-radius: 4px;
+}
+#calcForm button:hover, 
+#calcForm button:active {
+    background-color:#c9c9c9;
+}
+
+#resultsBox {
+    justify-content: center;
+    text-align: center !important;
+    margin-top: 7px;
+    border-radius: 4px;
+    background-color: #c9c9c9;
+    padding: 10px;
+    border: 2px dotted black;
+}
+#resultsBox table {
+    text-align: center;
+    width: fit-content;
+}
+#resultsBox table tr {
+    width: fit-content;
+    
+}
+
+.resultLabel {
+    text-align: right;
+}

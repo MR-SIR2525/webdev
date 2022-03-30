@@ -1,5 +1,5 @@
 /* This CSS file includes the default style for title, navbar, and general font across all pages.
- * Last updated:  2/1/22
+ * Last updated:  3/27/22
  */
 html {
 	margin-top: 0px;
@@ -26,6 +26,14 @@ li {
   top: 0;
 }
 
+#watermark
+{
+  z-index: -1;
+  position: absolute;
+  width: 12%;
+  height: auto;
+  opacity: 150%;
+}
 
 .sitetitle {
   font-size: 24pt;
@@ -36,15 +44,6 @@ li {
   margin-top: 4px;
   margin-bottom:7px;
   /* padding-top: 0px; */
-}
-
-#watermark
-{
-  z-index: -1;
-  position: absolute;
-  width: 12%;
-  height: auto;
-  opacity: 150%;
 }
 
 /********* Navigation styling *********/
@@ -215,7 +214,7 @@ li {
   border-top: var(--theme-topbar-border-top-size, 3px) solid var(--theme-primary-color);
 }
 
-/******************** navInfo is not really used anymore... *******************/
+/******************** .navInfo is not really used anymore... *******************/
 /* nav description text container class */
 /* https://www.w3schools.com/css/css_tooltip.asp#:~:text=Basic%20Tooltip&text=HTML%3A%20Use%20a%20container%20element,with%20class%3D%22tooltiptext%22%20. */
 .navInfo {

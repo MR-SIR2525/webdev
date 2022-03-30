@@ -1,300 +1,344 @@
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  Name:  Andrew Blythe
-  Date Started:  Jan 16, 2022
-  Web Development
-  Desc:  index.html for github "webdev" website
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+<!--  
+ * Andrew Blythe
+ * Web Development
+ * - created 3-27-22 for Module 5 assignment where I had to use a grid layout for my webpage 
+-->
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Andrew's Page - Home</title>
+	<title>Andrew's Page - Home</title>
+	<link rel="stylesheet" href="/webdev/Styles/gridStyle.css">
+	<!--font awesome icons ↓-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- For image descriptions ↓-->
+	<link rel="stylesheet" href="/webdev/Styles/tooltips.css"> 
 
-  <link rel="stylesheet" href="/webdev/Styles/defaultStyle.css">
-  <link rel="stylesheet" href="/webdev/Styles/tooltips.css"> <!-- For image descriptions -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   <!--font awesome icons-->
+	<style>
+		.imagesize {
+			width: 24%;
+			border: solid transparent 3px;
+		}
 
-  <style>
-    .imagesize 
-    {
-      width: 24%;
-    }
-    .imagesize:hover, .imagesize:focus
-    {
-      border: solid rgb(24, 22, 22) 3px;
-      border-radius: 3px;
-    }
-    table, tr, th, td 
-    {
-      border: 1px solid black;
-      border-collapse: collapse;
-      padding: 3px;
-    }
-    #first-column-header /*removes margin of header so that it's flush with previous element*/
-    {
-      margin-top: 0px;
-    }
-    ul 
-    {
-      display: block;
-      list-style-type: disc;
-      margin-block-start: .5em;
-      margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-      padding-inline-start: 40px;
-    }
-    .favSiteLink a 
-    {
-      text-decoration: none;
-      color: rgb(16, 16, 211);
-    } 
-    .favSiteLink a:hover 
-    {
-      color: rgb(16, 16, 211);
-      text-decoration:underline;
-    }
+		.imagesize:hover,
+		.imagesize:focus {
+			border: solid rgb(24, 22, 22) 3px;
+			border-radius: 3px;
+		}
 
-    .favSiteLink a:focus 
-    {
-      text-decoration: underline; 
-    }    
-  </style>
-  <!-- TODO:  maybe make only navigation sticky instead of whole top bar? -->
+		table,
+		tr,
+		th,
+		td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 3px;
+		}
+
+		/*removes margin of header so that it's flush with previous element*/
+		#first-column-header
+		{
+			margin-top: 0px;
+		}
+
+		ul {
+			display: block;
+			list-style-type: disc;
+			margin-block-start: .5em;
+			margin-block-end: 1em;
+			margin-inline-start: 0px;
+			margin-inline-end: 0px;
+			padding-inline-start: 40px;
+		}
+
+		.favSiteLink a {
+			text-decoration: none;
+			color: rgb(16, 16, 211);
+		}
+
+		.favSiteLink a:hover {
+			color: rgb(16, 16, 211);
+			text-decoration: underline;
+		}
+
+		.favSiteLink a:focus {
+			text-decoration: underline;
+		}
+	</style>
 </head>
 
 <body>
-  <div class="navButton sticky" id="nav-and-title">
-    <header>
-      <h1 class="sitetitle">Andrew's Web Development Page</h1>
+	<!-- Right now, this is just a proof of concept; will add subnav and extras later... -->
 
-      <!-- <span style="margin: 0px 8px 0px 15px; top:5px; right:0; text-align:justify; position:absolute; max-width:27%; font-size:medium; font-weight: 525; font-family:Arial,Helvetica,sans-serif; color:rgb(144, 220, 255);">
-        Note: Github does not seem to want to update all pages even while they show as updated in my repository.</span>  -->
-    </header>
+	<!-- Any notices go here. 
+         Do not delete. Set display:none in "gridStyle.css" -->
+	<div id="notice">
+		<h4 style="text-align:left">Notice:</h4>
+		<p></p>
+	</div>
 
-    <div id="navActual">
-      <nav>
-        <a href="/webdev/index.html" rel="noopener" title="Website Home">Home</a>
-        <div class="subnav">
-          <a class="subnavbtn" style="cursor: default;">HTML Webdev <i class="fa fa-caret-down"></i></a>
-          <div class="subnav-content" style="width: 8.93em;">
-            <a href="/webdev/Module2/index.html" rel="noopener">Module 2</a>
-            <a href="/webdev/Module3/index.html" rel="noopener">Module 3</a>
-            <a href="/webdev/Module4/index.html" rel="noopener">Module 4</a>
-          </div>
-        </div>
-        <div class="subnav">
-          <a href="/webdev/ClientSide/index.html" class="subnavbtn"rel="noopener"title="Visit Client Side page">Client Side <i class="fa fa-caret-down"></i></a>
-          <div class="subnav-content" style="width: 7.2em;">
-            <a href="/webdev/ClientSide/Module2/" rel="noopener">Module 2</a>
-            <a href="/webdev/ClientSide/Module3/" rel="noopener">Module 3</a>
-            <a href="/webdev/ClientSide/Module4/" rel="noopener">Module 4</a>
-          </div>
-        </div>
-        <a href="/webdev/Module1/Module1Assignment/headings.html" rel="noopener" 
-            title="early HTML practice and stuff about calculus. Also, link to my repository">Headings.html</a>
-        <a href="https://thegravvytrain.github.io/webdev/" rel="noopener" title="My buddy Grey's website">Grey's Page</a>
-        <a href="/webdev/Module1/Module1Assignment/secret.html" rel="noopener" title="Secret page" style="cursor: progress;">Secret</a>
-        <a href="/webdev/Module1/Module1Assignment/aboutMe.html" rel="noopener" title="The missile...">About Me</a>
-        </nav>
-    </div> <!--End of #navActual-->
-  </div> <!--End of whole nav bar thing-->
+	<div class="grid-container">
+		<div class="box item1 navbar sticky" id="navAndTitle"> 
+			<header>
+				<h1 class="sitetitle" id="sitetitle" style="transition: all 1s ease 1s;">Andrew's Web Development Page</h1>
+			</header>
 
-  <img id="watermark" style="width: 30%;" src="/webdev/Images/watermark.png" alt="watermark for andrew's webdev">
+			<nav>
+				<a href="/webdev/index.html" rel="noopener" title="Website Home">Home</a>
+				<div class="subnav">
+					<a href="javascript:void(0)" class="subnavbtn">HTML Webdev <i class="fa fa-caret-down"></i></a>
+					<div class="subnav-content" style="width: 8.93em;">
+						<a href="/webdev/Module2/index.html" rel="noopener">Module 2</a>
+						<a href="/webdev/Module3/index.html" rel="noopener">Module 3</a>
+						<a href="/webdev/Module4/index.html" rel="noopener">Module 4</a>
+						<a href="/webdev/Module5/" rel="noopener">Module 5</a>
+					</div>
+				</div>
 
- <article style="margin-left: 0.5%; margin-right: 0.5%;">
-    <p style="font-size: larger;">
-      My name is Christian Blythe but I go by Andrew, my middle name. I am 21 years old as of December 30th, and
-      I am studying to be a coder/programmer at Pearl River Community College in Forest County, Mississippi.
-      I work regularly for my father at his mechanic shop on various gas-powered automobiles, doing anything
-      from brakes to replacing a radiator or alternator. I also work on my car, sometimes for fun, sometimes
-      out of necessity. Generally, I am a reserved and quiet person who values honesty and a do-it-yourself mentality.
-      <br>
-      <br>
-    </p>
-  </article>
+				<div class="subnav">
+					<a href="javascript:void(0)" class="subnavbtn" rel="noopener" title="Visit Client Side page">Client Side <i class="fa fa-caret-down"></i></a>
+					<div class="subnav-content" style="width: 7.2em;">
+						<a href="/webdev/ClientSide/Module2/" rel="noopener">Module 2</a>
+						<a href="/webdev/ClientSide/Module3/" rel="noopener">Module 3</a>
+						<a href="/webdev/ClientSide/Module4/" rel="noopener">Module 4</a>
+						<a href="/webdev/ClientSide/Module5/" rel="noopener">Module 5</a>
+					</div>
+				</div>
+				<a href="/webdev/Module1/Module1Assignment/headings.html" rel="noopener"
+					title="early HTML practice and stuff about calculus. Also, link to my repository">Headings.html</a>
+				<a href="https://thegravvytrain.github.io/webdev/" rel="noopener" title="My buddy Grey's website">Grey's
+					Page</a>
+				<a href="/webdev/Module1/Module1Assignment/secret.html" rel="noopener" title="Secret page">
+					Secret</a>
+				<a href="/webdev/Module1/Module1Assignment/aboutMe.html" rel="noopener" title="The missile...">About
+					Me</a>
+			</nav>
+		</div>
+		<!--End of #navActual-->
+		<!-- End of old whole nav bar thing was here -->
 
-  <article class="columns3" style="margin-left: 0.5%; margin-right: 0.5%;">
-    <header>
-      <h3 id="first-column-header">Video Games</h3>
-    </header>
-    <p>
-      I have a few different activities I like to do in my free time. Video games are one thing, taking up a
-      notable portion of my free time. My most played games currently are Rocket League (<span class="italic">car soccer
-        game</span>), Minecraft (<span class="italic">open-world building and exploration</span>), and The Forest (<span
-        class="italic">wilderness survival horror game</span>). There's also Call of Duty Black Ops 3 Zombies, anything
-      from the Grand Theft Auto series, and Need for Speed that I will play sometimes.
-    </p>
+		<div class="box item2" id="menu">
+			<!-- <span class="sticky">
+				<br>
+				<a href="#navAndTitle">Back to the top</a>
+			</span> -->
+			
+		</div>
 
-    <header><h3>Stock Market</h3></header>
-    <p>
-      Then, there's the stock market. I began learning about and investing in the stock market back in
-      September of 2020, buying fractional shares in companies like 3M, Southwest Airlines, Tesla, and
-      Exxon Mobil. At first, I was putting up tiny amounts of money into companies I knew a bit about.
-      Since then, I've come a long way, having learned much of the lingo, research requirements, and
-      risks. Now, I spend most of the time reading up on the news about companies/stocks I watch, keeping
-      up with current events that could potentially affect the market. I also look at charts and past
-      performance of stocks I am interested in, but I try not to spend too much time getting caught up in the
-      day-to-day ups and downs. Overall, my goal is to use the stock market to accumulate some wealth over the long
-      term.
-    </p>
+		<div class="box item3">
+			<article style="margin-left: 0.5%; margin-right: 0.5%;">
+				<p style="font-size: larger;">
+					My name is Christian Blythe but I go by Andrew, my middle name. I am 21 years old as of December
+					30th, and
+					I am studying to be a coder/programmer at Pearl River Community College in Forest County,
+					Mississippi.
+					I work regularly for my father at his mechanic shop on various gas-powered automobiles, doing
+					anything
+					from brakes to replacing a radiator or alternator. I also work on my car, sometimes for fun,
+					sometimes
+					out of necessity. Generally, I am a reserved and quiet person who values honesty and a
+					do-it-yourself mentality.
+					<br>
+					<br>
+				</p>
+			</article>
 
-    <header>
-      <h3>Cars</h3>
-    </header>
-    <p>
-      To say that I am a car enthusiast would be accurate. I credit this to growing up around cars at my father's
-      shop. Because of this, I enjoy working on my car, watching TV shows like Top Gear UK and The Grand Tour, and
-      reading about or watching content about cars, vehicles, and general mechanical-related things. I view
-      many cars as pieces of art and, one day, after making some substantial money from a programming job (I hope),
-      I will be able to afford some pretty neat cars. These are some that I want: </p>
-    <ul id="list-of-cars">
-      <li><a href="#ISF-img1" title="Jump to Lexus ISF picture">2011-2014 Lexus ISF</a></li>
-      <li id="Lexus-GSF"><a href="https://youtu.be/dKX4xzsKuII?t=1" title="Video review of a Lexus GSF" rel="noreferrer noopener" target="_blank">Lexus GSF</a></li>
-      <li>a black Chevrolet Tahoe</li>
-      <li>2018 or '19 Bentley Continental GT</li>
-      <li>Mercury Marauder</li>
-      <li>Ferrari 458</li>
-      <li>Ferrari 488</li>
-    </ul>
-    <p>
-      There are many more cars I'd love to have, too many to list here, but ones listed have the front row seats of my
-      wish list.
-    </p>
-  </article>
-  <br>
+			<article style="margin-left: 0.5%; margin-right: 0.5%;">
+				<header>
+					<h3 id="first-column-header">Video Games</h3>
+				</header>
+				<p>
+					I have a few different activities I like to do in my free time. Video games are one thing, taking up
+					a
+					notable portion of my free time. My most played games currently are Rocket League (<span
+						class="italic">car soccer
+						game</span>), Minecraft (<span class="italic">open-world building and exploration</span>), and
+					The Forest (<span class="italic">wilderness survival horror game</span>). There's also Call of Duty
+					Black Ops 3 Zombies, anything
+					from the Grand Theft Auto series, and Need for Speed that I will play sometimes.
+				</p>
 
-  <article>
-    <section id="car-pics" style="text-align:center;">
-      
-      <div class="tooltip" style="display: inline;">
-        <img id="ISF-img1" class="imagesize" src="/webdev/Images/Lexus-ISF-black.jpg" alt="Black Lexus ISF sedan side view">
-        <span class="tooltiptext">Lexus ISF. Imagine a rear-wheel drive Toyota Camry with a rumbly 5.0L V8 that produces 416 horsepower. Its engine was the genesis for all V8 Lexus cars</span>
-      </div>
-      <div class="tooltip" style="display: inline;" title="Click to see a review of this on Youtube">
-        <a id="ISF-img2" href="https://youtu.be/cStFGWLv1sg" rel="noopener noreferrer" target="_blank"><img class="imagesize" src="/webdev/Images/Lexus-ISF-black-front.jpg" alt="Black Lexus ISF sedan front view"></a>
-        <span class="tooltiptext">Lexus ISF</span>
-      </div>
-      <!-- <div class="tooltip" style="display: inline;">
-        <img class="imagesize" src="/webdev/Images/2017-bentley-continental-supersport.jpg"
-          alt="2017 Bentley Continental Super Sport in dark charcoal grey">
-        <span class="tooltiptext">2017 Bentley Continental Super Sport. All-wheel drive, ultra luxury, powered by a 6.0L V12 engine. Surprisingly a good rally car.</span>
-      </div> -->
-      <div class="tooltip" style="display: inline;">
-        <img class="imagesize" src="/webdev/Images/2019-Lexus-GS-F-10th-Anniversary-Edition-05.png" alt="Ferrari 458 Italia in red">
-        <span class="tooltiptext" style="left:unset; right:4px; width: 35%;">The Lexus GSF. Same engine from the ISF but tuned a bit better. Newer. More comfortable</span>
-      </div>
-      <div class="tooltip" style="display: inline;">
-        <img class="imagesize" src="/webdev/Images/Ferrari-458-Italia.jpg" alt="Ferrari 458 Italia in red">
-        <span class="tooltiptext" style="left:unset; right:4px; width: 35%;">Ferrari 458 Italia, one of the greatest super
-          cars ever made.</span>
-      </div>
-    </section>
+				<header>
+					<h3>Stock Market</h3>
+				</header>
+				<p>
+					Then, there's the stock market. I began learning about and investing in the stock market back in
+					September of 2020, buying fractional shares in companies like 3M, Southwest Airlines, Tesla, and
+					Exxon Mobil. At first, I was putting up tiny amounts of money into companies I knew a bit about.
+					Since then, I've come a long way, having learned much of the lingo, research requirements, and
+					risks. Now, I spend most of the time reading up on the news about companies/stocks I watch, keeping
+					up with current events that could potentially affect the market. I also look at charts and past
+					performance of stocks I am interested in, but I try not to spend too much time getting caught up in
+					the
+					day-to-day ups and downs. Overall, my goal is to use the stock market to accumulate some wealth over
+					the long
+					term.
+				</p>
 
-    <div style="text-align: right; right: 3px;">
-      <p>
-        Here are images of the cars I covet the most. <br>
-        Hover over one to see what kind it is.
-      </p>
-    </div>
-    
-    <section id="car-spec-table" style="margin-left: 0.5%; margin-right: 0.5%;">
-      <h3>Car Specs</h3>
-      <table>
-        <tr>
-          <th style="width: 200px;">Vehicle</th>
-          <th style="width: 90px;">Engine</th>
-          <th style="width: 30px;">hp</th>
-          <th style="width: 25px;">drive</th>
-        </tr>
-        <tr>
-          <td>2013 Lexus ISF</td>
-          <td>5.0L V8</td>
-          <td>420</td>
-          <td>RWD</td>
-        </tr>
-        <tr>
-          <td>2017 Bentley Continental GT</td>
-          <td>6.0L W12</td>
-          <td>500</td>
-          <td>AWD</td>
-        </tr>
-        <tr>
-          <td>2015 Ferrari 458 Italia</td>
-          <td>4.5L V8</td>
-          <td>570</td>
-          <td>RWD</td>
-        </tr>
-        <tr>
-          <td>2018 Lexus GSF</td>
-          <td>5.0L V8 (same engine from ISF)</td>
-          <td>467</td>
-          <td>RWD</td>
-        </tr>
-      </table>
-    </section>
-  </article>
-  <br>
+				<header>
+					<h3>Cars</h3>
+				</header>
+				<p>
+					To say that I am a car enthusiast would be accurate. I credit this to growing up around cars at my
+					father's
+					shop. Because of this, I enjoy working on my car, watching TV shows like Top Gear UK and The Grand
+					Tour, and
+					reading about or watching content about cars, vehicles, and general mechanical-related things. I
+					view
+					many cars as pieces of art and, one day, after making some substantial money from a programming job
+					(I hope),
+					I will be able to afford some pretty neat cars. These are some that I want: </p>
+				<ul id="list-of-cars">
+					<li class="favSiteLink"><a href="#ISF-img1" title="Jump to Lexus ISF picture">2011-2014 Lexus ISF</a></li>
+					<li id="Lexus-GSF" class="favSiteLink"><a href="https://youtu.be/dKX4xzsKuII?t=1" title="Video review of a Lexus GSF"
+							rel="noreferrer noopener" target="_blank">Lexus GSF</a></li>
+					<li>a black Chevrolet Tahoe</li>
+					<li>2018 or '19 Bentley Continental GT</li>
+					<li>Mercury Marauder</li>
+					<li>Ferrari 458</li>
+					<li>Ferrari 488</li>
+				</ul>
+				<p>
+					There are many more cars I'd love to have, too many to list here, but ones listed have the front row
+					seats of my
+					wish list.
+				</p>
+			</article>
+			<br>
 
-  <section id="module3Assignment" style="margin-left: 0.5%; margin-right: 0.5%;">
-    <header><h2>"Favorite" Website</h2></header>
-    <p class="favSiteLink" id="favSite">
-      I use <a href="https://www.youtube.com" target="_blank" rel="noreferrer noopener" title="Visit Youtube, a site I use regularly">Youtube</a> 
-      a lot to research and catch up on information about video games and the stock market. I also use the site when I am bored or simply 
-      want some background noise.
-    </p>
-    <br>
+			<article>
+				<section id="car-pics" style="text-align:center;">
 
-    <article>
-      <header><h2>Jeremy Clarkson Explains Cars</h2></header>
-      <video src="Images/Clarkson-explains-cars.mp4" width="30%" title="Jeremy Clarkson Explains Cars" controls></video>
+					<div class="tooltip" style="display: inline;">
+						<img id="ISF-img1" class="imagesize" src="/webdev/Images/Lexus-ISF-black.jpg"
+							alt="Black Lexus ISF sedan side view">
+						<span class="tooltiptext">Lexus ISF. Imagine a rear-wheel drive Toyota Camry with a rumbly 5.0L
+							V8 that produces 416 horsepower. Its engine was the genesis for all V8 Lexus cars</span>
+					</div>
+					<div class="tooltip" style="display: inline;" title="Click to see a review of this on Youtube">
+						<a id="ISF-img2" href="https://youtu.be/cStFGWLv1sg" rel="noopener noreferrer"
+							target="_blank"><img class="imagesize" src="/webdev/Images/Lexus-ISF-black-front.jpg"
+								alt="Black Lexus ISF sedan front view"></a>
+						<span class="tooltiptext">Lexus ISF</span>
+					</div>
+					<!-- <div class="tooltip" style="display: inline;">
+						<img class="imagesize" src="/webdev/Images/2017-bentley-continental-supersport.jpg"
+							alt="2017 Bentley Continental Super Sport in dark charcoal grey">
+						<span class="tooltiptext">2017 Bentley Continental Super Sport. All-wheel drive, ultra luxury, powered by a 6.0L V12 engine. Surprisingly a good rally car.</span>
+					</div> -->
+					<div class="tooltip" style="display: inline;">
+						<img class="imagesize" src="/webdev/Images/2019-Lexus-GS-F-10th-Anniversary-Edition-05.png"
+							alt="Ferrari 458 Italia in red">
+						<span class="tooltiptext" style="left:unset; right:4px; width: 35%;">The Lexus GSF. Same engine
+							from the ISF but tuned a bit better. Newer. More comfortable</span>
+					</div>
+					<div class="tooltip" style="display: inline;">
+						<img class="imagesize" src="/webdev/Images/Ferrari-458-Italia.jpg"
+							alt="Ferrari 458 Italia in red">
+						<span class="tooltiptext" style="left:unset; right:4px; width: 35%;">Ferrari 458 Italia, one of
+							the greatest super
+							cars ever made.</span>
+					</div>
+				</section>
 
-    </article>
-  </section>
+				<div style="text-align: right; right: 3px;">
+					<p>
+						Here are images of the cars I covet the most. <br>
+						Hover over one to see what kind it is.
+					</p>
+				</div>
 
-  
-  
+				<section id="car-spec-table" style="margin-left: 0.5%; margin-right: 0.5%;">
+					<h3>Car Specs</h3>
+					<table>
+						<tr>
+							<th style="width: 200px;">Vehicle</th>
+							<th style="width: 90px;">Engine</th>
+							<th style="width: 30px;">hp</th>
+							<th style="width: 25px;">drive</th>
+						</tr>
+						<tr>
+							<td>2013 Lexus ISF</td>
+							<td>5.0L V8</td>
+							<td>420</td>
+							<td>RWD</td>
+						</tr>
+						<tr>
+							<td>2017 Bentley Continental GT</td>
+							<td>6.0L W12</td>
+							<td>500</td>
+							<td>AWD</td>
+						</tr>
+						<tr>
+							<td>2015 Ferrari 458 Italia</td>
+							<td>4.5L V8</td>
+							<td>570</td>
+							<td>RWD</td>
+						</tr>
+						<tr>
+							<td>2018 Lexus GSF</td>
+							<td>5.0L V8 (same engine from ISF)</td>
+							<td>467</td>
+							<td>RWD</td>
+						</tr>
+					</table>
+				</section>
+			</article>
+			<br>
+
+			<section id="module3Assignment" style="margin-left: 0.5%; margin-right: 0.5%;">
+				<header>
+					<h2>"Favorite" Website</h2>
+				</header>
+				<p class="favSiteLink" id="favSite">
+					I use <a href="https://www.youtube.com" target="_blank" rel="noreferrer noopener"
+						title="Visit Youtube, a site I use regularly">Youtube</a>
+					a lot to research and catch up on information about video games and the stock market. I also use the
+					site when I am bored or simply
+					want some background noise.
+				</p>
+				<br>
+
+				<article>
+					<header>
+						<h2>Jeremy Clarkson Explains Cars</h2>
+					</header>
+					<video src="Images/Clarkson-explains-cars.mp4" width="30%" title="Jeremy Clarkson Explains Cars"
+						controls></video>
+
+				</article>
+			</section>
+		</div>
+
+		<div class="box item4">
+			<!-- Right -->
+		</div>
+
+		<div class="box item5">
+			<footer>
+				
+				<p id="contactMe" class="favSiteLink">
+					If you wish to contact me:&nbsp;<button id="mmmButton" title="click to show email" type="button"
+						onclick="revealMMM()" style="width: 90px; padding: 2px 5px 2px 5px;">reveal email</button>&nbsp;
+					<span id="mmm"></span>
+
+					<script src="/webdev/Scripts/mmmButton.js"></script>
+				</p>
+				<p id="lastModified" style="text-align: right; float: right;"></p>
 
 
-  <footer>
-    <hr />
-    <p id="contactMe" class="favSiteLink">
-      If you want to contact me:&nbsp;<button id="mmmButton" title="click to show email" type="button" onclick="revealMMM()" style="width: 90px; padding: 2px 5px 2px 5px;">reveal email</button>&nbsp;
-      <span id="mmm"></span>  
-
-      <script>
-        function revealMMM()
-        {
-          if (document.getElementById('mmm2'))
-          {
-            document.getElementById('mmm').innerHTML = "";
-            document.getElementById("mmmButton").innerText = "reveal email";
-          }
-          else
-          {
-            //I'm showing the email this way in hopes that web crawlers won't be able to decipher it
-            document.getElementById("mmm").innerHTML = 
-            "<a id=\"mmm2\" href" + "=\"" + "ma" + "il" + "to" + ":" + "christian." + "blythe." + "30" + "@" + "student." + "prcc." + "e" + "du\"" 
-            + ">" + "christian." + "blythe." + "30" + "@" + "student." + "prcc." + "edu" + "</a>";
-            document.getElementById("mmmButton").innerText = "hide email";
-          }
-        }
-      </script>
-      <br>
-      </p>  
-      <p id="lastModified" style="text-align: right; float: right;"></p>
+				<script>//JS thing for a last modified feature
+					document.getElementById("lastModified").innerText = ("Last modified: " + document.lastModified);            
+				</script>
 
 
-    <script>//JS thing for a last modified feature
-      document.getElementById("lastModified").innerText = ("Last modified: " + document.lastModified);            
-    </script>
-
-
-  </footer>
+			</footer>
+		</div>
+	</div>
 
 </body>
 

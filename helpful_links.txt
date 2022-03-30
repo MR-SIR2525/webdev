@@ -49,3 +49,11 @@ https://www.w3schools.com/howto/howto_css_dropdown.asp
 
 Cursor styles
 https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+
+CSS Box Shadow
+https://css-tricks.com/snippets/css/css-box-shadow/
+
+Apple Calculator Color Scheme
+https://www.schemecolor.com/apple-calculator-app-icon-2017-colors.php
+
+https://stackoverflow.com/questions/14650932/set-value-to-currency-in-input-type-number
