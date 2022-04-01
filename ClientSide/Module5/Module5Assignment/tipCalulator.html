@@ -8,19 +8,24 @@
 
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="tipCalcStyle.css">
+    <link rel="stylesheet" href="/webdev/Styles/defaultStyle.css">
     
 </head>
 
 <body>
-    
+    <div class="navButton" style="margin-top:-8px; padding-top: 3px; margin-bottom: 15px; background-color: unset;">
+		<a href="../" title="back to Client Side Module 5">↩  Module 5</a>
+	</div>
 
     <div class="flex-container">
         <div class="box" id="title">Tip Calculator</div>
 
         <div class="box" id="calculatorBody">
+
             <form id="calcForm" name="calcform" onclick="return false;" >
                 <input id="billEntry" name="billEntry" size="10" autofocus="autofocus" 
                     placeholder="Total Bill $" type="number">
+                    
                 <input id="tipEntry" name="tipEntry" size="10" 
                     placeholder="Tip %" type="number">
                 <br>

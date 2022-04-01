@@ -15,7 +15,10 @@ function calculateTip()
         else 
             resultBill = parseFloat(bill);
     }
-    
+    //clearing input boxes
+    document.getElementById("billEntry").value = "";
+    document.getElementById("tipEntry").value = "";
+    //printing results
     document.getElementById("tipHere").innerText = resultTip.toFixed(2);
     document.getElementById("totalHere").innerText = resultBill.toFixed(2);
         
