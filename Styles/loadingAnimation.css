@@ -1,0 +1,12 @@
+/* This style is for html pages that are will redirect to another page. */
+#loadingScreen 
+{
+    /* background: url(../images/loading1.gif) no-repeat 5px 8px; */
+    background: url(../images/loading1.gif) no-repeat;
+    padding-left: 25px;
+}
+/* hide the close x on the loading screen */
+.loadingScreenWindow .ui-dialog-titlebar-close 
+{
+    display: none;
+}
