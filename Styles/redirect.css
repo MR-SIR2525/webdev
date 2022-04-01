@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    /* background-image: url(/webdev/Images/loading.gif); */
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    /* background-color: lightblue; */
+}
+
+.flex-container>div {
+    /* background-color: #f1f1f1; */
+    color: white;
+    /* width: 100px;
+    height: 100px; */
+    margin: 7px;
+}
+
+#linkBox {
+    margin-top: 20px;
+    text-align: center;
+    font-size: larger;
+}
+#linkBox a {
+    text-decoration: none;
+    color:blue;
+    padding: 6px;
+}
+#linkBox a:hover
+{
+    color: grey;
+    text-decoration: underline;
+}

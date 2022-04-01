@@ -2,24 +2,32 @@
 function displayKey(e) 
 {
     // which key was pressed?
-    var keycode = e.which;
+    var keycode=e.which;
 
-    character = String.fromCharCode(keycode);
+    character=String.fromCharCode(keycode);
 
     // find the object for the destination paragraph
     var keys_paragraph = document.getElementById('keys');
 
-    var ktype = document.getElementById("ktype");
-    message = e.type + "<br>";
-    if (e.type == "keyup")
-        message += "<br><br>";
+    var ktype = document.getElementById('ktype')
+    message = e.type + "<br> ";
 
-    // add the character to the paragraph
-    keys_paragraph.innerHTML += character;
-    ktype.innerHTML += e.type + " ";
+    if(e.type == "keyup")
+    {
+        message = "</br>" + message;
+    }
+    if (e.type == "keypress")
+    {
+        character=String.fromCharCode(keycode);
+        // add the character to the paragraph
+        keys_paragraph.innerHTML += character;
+    }
+    
+    // ktype.innerHTML.padStart(ktype.innerText, 50, message);
+    let temp = ktype.innerHTML;
+    ktype.innerHTML = message + temp;
 }
 
-//keyboard event listener
 document.addEventListener("keypress", displayKey);
 document.addEventListener("keydown", displayKey);
 document.addEventListener("keyup", displayKey);
