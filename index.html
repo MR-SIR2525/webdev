@@ -19,6 +19,9 @@
 	<link rel="stylesheet" href="/webdev/Styles/tooltips.css"> 
 
 	<style>
+		div {
+			border-radius: 5px;
+		}
 		.imagesize {
 			width: 24%;
 			border: solid transparent 3px;
@@ -77,7 +80,7 @@
 	<!-- Any notices go here. 
          Do not delete. Set display:none in "gridStyle.css" -->
 	<div id="notice">
-		<h4 style="text-align:left">Notice:</h4>
+		<h4 style="text-align:left">Notice: my div boxes are all rounded.</h4>
 		<p></p>
 	</div>
 
@@ -212,7 +215,18 @@
 
 			<article>
 				<section id="car-pics" style="text-align:center;">
-
+					<div class="flip-box">
+						<div class="flip-box-inner">
+						  <div class="flip-box-front">
+							<img id="ISF-img1" class="imagesize" src="/webdev/Images/Lexus-ISF-black.jpg">
+						  </div>
+						  <div class="flip-box-back">
+							<h2>Lexus ISF</h2>
+							<p>Lexus ISF. Imagine a rear-wheel drive Toyota Camry with a rumbly 5.0L
+								V8 that produces 416 horsepower. Its engine was the genesis for all V8 Lexus cars</p>
+						  </div>
+						</div>
+					</div>
 					<div class="tooltip" style="display: inline;">
 						<img id="ISF-img1" class="imagesize" src="/webdev/Images/Lexus-ISF-black.jpg"
 							alt="Black Lexus ISF sedan side view">

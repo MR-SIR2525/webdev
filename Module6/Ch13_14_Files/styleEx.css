@@ -1,0 +1,6 @@
+/* Style for background examples from Dr. Preston's video 4/4/22  */
+.backgroundImg {
+    background: lightgrey url(/webdev/Images/cloudbackground.jpg) no-repeat;
+    background-size: 100%;
+}
+

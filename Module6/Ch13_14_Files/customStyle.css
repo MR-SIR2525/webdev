@@ -1,0 +1,45 @@
+.boxT {
+    width: 20rem;
+    height: 30rem;
+    border: solid 1px black;
+    /* background: linear-gradient(#4138f5 0%, #59c4e4 100%); */
+    /* background: url(https://picsum.photos/536/354) center top / cover no-repeat; */
+    padding: 1rem;
+    color: white; 
+    margin: 1rem;
+    text-align: center;
+    float: left;
+}
+  .one {
+    background: url(https://i.picsum.photos/id/103/2592/1936.jpg?hmac=aC1FT3vX9bCVMIT-KXjHLhP6vImAcsyGCH49vVkAjPQ)  center top / cover no-repeat;
+  }
+  .two {
+    /* background: linear-gradient(#59c4e4 0%, #4138f5 100%); */
+    background: url(https://i.picsum.photos/id/1018/3914/2935.jpg?hmac=3N43cQcvTE8NItexePvXvYBrAoGbRssNMpuvuWlwMKg) center top / cover no-repeat;
+
+    /* transform-origin: top right; */
+    transform: rotate(10deg);
+  }
+  .three {
+    transform-origin: bottom right;
+    transform: skew(345deg);
+    background: url(https://i.picsum.photos/id/1028/5184/3456.jpg?hmac=WhttNfn25eTgLTNnhRujSq4IVjx2mMa6wvPG1c6qMVc) center top / cover no-repeat;
+
+  }
+  .four {
+    /* background: linear-gradient(#59c4e4 0%, #4138f5 100%) ; */
+    width: 30rem !important;
+    background: url(https://picsum.photos/536/354) center top / cover no-repeat;
+    /* transform: matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4); */
+    margin-left: 20rem;
+    transform: rotate3d(1, 1, 1, 30deg) matrix3d(1,0,0,0,0,1,6,0,0,0,1,0,50,70,0,1.1);
+  }
+  .skewB {
+      width: 50%;
+      background: linear-gradient(#59c4e4 0%, #4138f5 100%);
+      margin: 0 auto;
+      padding: 10px;
+  }
+  .skewBT {
+      transform: skew(15deg);
+  }

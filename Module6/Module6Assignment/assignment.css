@@ -1,0 +1,8 @@
+.box 
+{
+    margin: 0 auto;
+    width: 45%;
+    height: 200px;
+    background: url(/webdev/Images/2016-lexus-gs-f.jpg) left bottom / 45% no-repeat,
+                linear-gradient(#0f0a6e 0%, #3267db 100%);
+}
