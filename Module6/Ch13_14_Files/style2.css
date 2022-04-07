@@ -1,0 +1,10 @@
+.box 
+{
+    margin: 0 auto;
+    width: 500px;
+    height: 400px;
+    background: url(images/wolf.svg) center bottom / 
+                                     cover repeat, 
+                url(images/moon.png) right top / 45% no-repeat,
+                linear-gradient(#0f0a6e 0%, #3267db 100%);
+}
