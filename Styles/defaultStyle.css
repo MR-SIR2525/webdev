@@ -86,7 +86,7 @@ li {
     background: #797979;
     /* border-color: #3b6df6 !important; *//* I think I like no border now*/
     border-radius: 0px;
-    /* transition: all 0.31s ease 0s; */
+    transition: all 0.45s ease 0s;
 }
 
 /**** subnavigation menu ****/
