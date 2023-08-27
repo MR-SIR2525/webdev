@@ -11,8 +11,8 @@ function revealMMM()
         //I'm showing the email this way in hopes that web crawlers won't be able to decipher it
         //Updated to show a new address
         document.getElementById("mmm").innerHTML =
-            "<a id=\"mmm2\" href" + "=\"" + "ma" + "il" + "to" + ":" + "ca" + "b13" + "61" + "@" + "mss" + "tat" + ".e" + "du\""
-            + ">" + "ca" + "b13" + "61" + "@" + "mss" + "tat" + ".e" + "du" + "</a>";
+            "<a id=\"mmm2\" href" + "=\"" + "ma" + "il" + "to" + ":" + "ca" + "b13" + "61" + "@" + "mss" + "tat" + "e.e" + "du\""
+            + ">" + "ca" + "b13" + "61" + "@" + "mss" + "tat" + "e.e" + "du" + "</a>";
         document.getElementById("mmmButton").innerText = "hide email";
     }
 }
